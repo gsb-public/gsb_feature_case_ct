@@ -18,7 +18,7 @@ features[field_instance][] = node-case-field_link_document
 features[field_instance][] = node-case-field_link_single
 features[field_instance][] = node-case-field_permissions_statement
 features[field_instance][] = node-case-field_tag
-features[field_instance][] = node-case-field_temp_citation
+features[field_instance][] = node-case-field_citation
 features[field_instance][] = node-case-field_year
 features[node][] = case
 features[variable][] = auto_entitylabel_node_case
@@ -35,4 +35,11 @@ features_exclude[field_base][field_author] = field_author
 features_exclude[field_base][field_item_id] = field_item_id
 features_exclude[field_base][field_permissions_statement] = field_permissions_statement
 features_exclude[field_base][field_link_document] = field_link_document
-features_exclude[field_base][field_temp_citation] = field_temp_citation
+features_exclude[field_base][field_citation] = field_citation
+
+
+; Information added by drush on 2013-11-13
+version = "WP-2354-dev"
+project = "gsb_feature_case_ct"
+datestamp = "1384370991"
+

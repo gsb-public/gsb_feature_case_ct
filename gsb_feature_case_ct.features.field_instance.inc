@@ -478,8 +478,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_temp_citation'
-  $field_instances['node-case-field_temp_citation'] = array(
+  // Exported field_instance: 'node-case-field_citation'
+  $field_instances['node-case-field_citation'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
     'deleted' => 0,
@@ -503,8 +503,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_temp_citation',
-    'label' => 'Temp Citation',
+    'field_name' => 'field_citation',
+    'label' => 'Citation',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
