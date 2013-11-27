@@ -43,3 +43,10 @@ version = "WP-2354-dev"
 project = "gsb_feature_case_ct"
 datestamp = "1384370991"
 
+
+
+; Information added by drush on 2013-11-20
+version = "WP-2354-dev"
+project = "gsb_feature_case_ct"
+datestamp = "1384995226"
+
