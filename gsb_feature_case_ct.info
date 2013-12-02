@@ -4,21 +4,29 @@ package = GSB
 version = 7.x-1.0
 project = gsb_feature_case_ct
 dependencies[] = ctools
+dependencies[] = date
 dependencies[] = features
 dependencies[] = gsb_feature_base_fields
+dependencies[] = link
+dependencies[] = options
 dependencies[] = strongarm
+dependencies[] = taxonomy
+dependencies[] = text
+datestamp = 1386007510
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
+features[field_base][] = field_document_uuid
 features[field_instance][] = node-case-field_academic_area_single
 features[field_instance][] = node-case-field_author
+features[field_instance][] = node-case-field_citation
 features[field_instance][] = node-case-field_description
 features[field_instance][] = node-case-field_document_name
+features[field_instance][] = node-case-field_document_uuid
 features[field_instance][] = node-case-field_item_id
 features[field_instance][] = node-case-field_link_document
 features[field_instance][] = node-case-field_link_single
 features[field_instance][] = node-case-field_permissions_statement
 features[field_instance][] = node-case-field_tag
-features[field_instance][] = node-case-field_citation
 features[field_instance][] = node-case-field_year
 features[node][] = case
 features[variable][] = auto_entitylabel_node_case
@@ -38,15 +46,8 @@ features_exclude[field_base][field_link_document] = field_link_document
 features_exclude[field_base][field_citation] = field_citation
 
 
-; Information added by drush on 2013-11-13
+; Information added by drush on 2013-12-02
 version = "WP-2354-dev"
 project = "gsb_feature_case_ct"
-datestamp = "1384370991"
-
-
-
-; Information added by drush on 2013-11-20
-version = "WP-2354-dev"
-project = "gsb_feature_case_ct"
-datestamp = "1384995226"
+datestamp = "1386009411"
 
