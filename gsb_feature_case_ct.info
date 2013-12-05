@@ -5,10 +5,7 @@ version = 7.x-1.0
 project = gsb_feature_case_ct
 dependencies[] = ctools
 dependencies[] = date
-<<<<<<< HEAD
 dependencies[] = entityreference
-=======
->>>>>>> WP-2354 Added new uuid field
 dependencies[] = features
 dependencies[] = gsb_feature_base_fields
 dependencies[] = link
@@ -16,20 +13,12 @@ dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
-<<<<<<< HEAD
 datestamp = 1386268998
-=======
-datestamp = 1386007510
->>>>>>> WP-2354 Added new uuid field
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
-features[field_base][] = field_document_uuid
 features[field_instance][] = node-case-field_academic_area_single
 features[field_instance][] = node-case-field_author
-<<<<<<< HEAD
 features[field_instance][] = node-case-field_author_sunet_id_reference
-=======
->>>>>>> WP-2354 Added new uuid field
 features[field_instance][] = node-case-field_citation
 features[field_instance][] = node-case-field_description
 features[field_instance][] = node-case-field_document_name
@@ -56,8 +45,5 @@ features_exclude[field_base][field_item_id] = field_item_id
 features_exclude[field_base][field_permissions_statement] = field_permissions_statement
 features_exclude[field_base][field_link_document] = field_link_document
 features_exclude[field_base][field_citation] = field_citation
-<<<<<<< HEAD
 features_exclude[field_base][field_document_uuid] = field_document_uuid
 features_exclude[field_base][field_author_sunet_id_reference] = field_author_sunet_id_reference
-=======
->>>>>>> WP-2354 Added new uuid field
