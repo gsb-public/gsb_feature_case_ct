@@ -80,5 +80,21 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 		$ewrapper->field_citation->set($doc->properties['gsb:cwoCitation']);
 	}    
 
+  if (!empty($doc->properties['gsb:cwoLearningObjective']) && trim($doc->properties['gsb:cwoLearningObjective']) != '') {
+    $ewrapper->field_learning_objective->set($doc->properties['gsb:cwoLearningObjective']);
+  }      
+
+  if (!empty($doc->properties['gsb:cwoLength']) && trim($doc->properties['gsb:cwoLength']) != '') {
+    $ewrapper->field_page_count->set($doc->properties['gsb:cwoLength']);
+  }        
+
+  if (!empty($doc->properties['gsb:cwoAcademicArea']) && trim($doc->properties['gsb:cwoAcademicArea']) != '') {
+    $ewrapper->field_business_insight_topic->set($doc->properties['gsb:cwoAcademicArea']);
+  }    
+
+  if (!empty($doc->properties['gsb:authorsSunetId'])) {
+    $ewrapper->field_author_sunet_id_reference->set(array_map('trim', explode(',', $doc->properties['gsb:authorsSunetId'])));
+  }  
+
   $ewrapper->save();
 }

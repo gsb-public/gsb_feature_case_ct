@@ -40,19 +40,19 @@ function gsb_feature_case_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '17',
+          'weight' => '20',
         ),
         'title' => array(
           'weight' => '2',
         ),
         'path' => array(
-          'weight' => '16',
+          'weight' => '19',
         ),
         'redirect' => array(
-          'weight' => '15',
+          'weight' => '18',
         ),
         'workbench_access' => array(
-          'weight' => '14',
+          'weight' => '17',
         ),
       ),
       'display' => array(),
