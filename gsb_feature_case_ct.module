@@ -74,10 +74,10 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $ewrapper->field_link_document = array();
   }
   
-	if (!empty($doc->properties['cm:author'])) {
-		$ewrapper->field_author->set(array_map('trim', explode(',', $doc->properties['cm:author'])));
+	if (!empty($doc->properties['cm:author']) && trim($doc->properties['cm:author']) != '') {
+		$ewrapper->field_author->set($doc->properties['cm:author']);
 	} else {
-    $ewrapper->field_author = array();
+    $ewrapper->field_author->set('');
   }
 
 	if (!empty($doc->properties['gsb:permisiionStatement']) && trim($doc->properties['gsb:permisiionStatement']) != '') {

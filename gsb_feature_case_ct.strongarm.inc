@@ -40,16 +40,16 @@ function gsb_feature_case_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '20',
-        ),
-        'title' => array(
-          'weight' => '2',
-        ),
-        'path' => array(
           'weight' => '19',
         ),
-        'redirect' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
           'weight' => '18',
+        ),
+        'redirect' => array(
+          'weight' => '17',
         ),
         'workbench_access' => array(
           'weight' => '17',
