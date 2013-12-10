@@ -48,7 +48,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 12,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -98,7 +98,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -145,7 +145,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -188,7 +188,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'taxonomy_hs',
-      'weight' => 13,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -238,7 +238,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 15,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -290,7 +290,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
@@ -340,7 +340,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -440,7 +440,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -492,7 +492,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 2,
     ),
     'workbench_access_field' => 0,
   );
@@ -556,7 +556,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 1,
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -620,7 +620,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -670,7 +670,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -701,7 +701,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_permissions_statement',
-    'label' => 'Permissions Statement',
+    'label' => 'Permission Statement',
     'required' => 0,
     'settings' => array(
       'linkit' => array(
@@ -720,7 +720,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 9,
     ),
     'workbench_access_field' => 0,
   );
@@ -765,7 +765,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 7,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -822,7 +822,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -841,7 +841,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
   t('Learning Objective');
   t('Length');
   t('Link at Harvard');
-  t('Permissions Statement');
+  t('Permission Statement');
   t('Publication Year');
   t('Tag');
 
