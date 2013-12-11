@@ -10,49 +10,6 @@
 function gsb_feature_case_ct_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-case-field_academic_area_single'
-  $field_instances['node-case-field_academic_area_single'] = array(
-    'bundle' => 'case',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_academic_area_single',
-    'label' => 'Academic Area',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-      ),
-      'type' => 'options_select',
-      'weight' => 10,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-case-field_author'
   $field_instances['node-case-field_author'] = array(
     'bundle' => 'case',
@@ -176,7 +133,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_business_insight_topic',
-    'label' => 'Business Insight Topic',
+    'label' => 'Academic Area',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -831,7 +788,6 @@ function gsb_feature_case_ct_field_default_field_instances() {
   t('Academic Area');
   t('Author');
   t('Author Sunet Id Reference');
-  t('Business Insight Topic');
   t('Citation');
   t('Description');
   t('Document Link');
