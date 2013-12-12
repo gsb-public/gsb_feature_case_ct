@@ -192,9 +192,10 @@ function gsb_feature_case_ct_field_default_field_instances() {
       'settings' => array(
         'maxlength_js' => 0,
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        'rows' => 5,
         'size' => 60,
       ),
-      'type' => 'text_textfield',
+      'type' => 'text_textarea',
       'weight' => 12,
     ),
     'workbench_access_field' => 0,
