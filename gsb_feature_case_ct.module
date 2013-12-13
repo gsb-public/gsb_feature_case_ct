@@ -40,6 +40,10 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $node = entity_create('node', $values);
   }
 
+  if ($node->type != 'case') {
+    return;
+  }
+
   $ewrapper = entity_metadata_wrapper('node', $node);
 
   $ewrapper->field_document_uuid->set($uuid);
