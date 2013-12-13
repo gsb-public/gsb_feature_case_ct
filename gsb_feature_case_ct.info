@@ -15,7 +15,7 @@ dependencies[] = options
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = text
-datestamp = 1386780247
+datestamp = 1386954771
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[field_instance][] = node-case-field_author
@@ -25,7 +25,6 @@ features[field_instance][] = node-case-field_citation
 features[field_instance][] = node-case-field_description
 features[field_instance][] = node-case-field_document_name
 features[field_instance][] = node-case-field_document_uuid
-features[field_instance][] = node-case-field_e_copy
 features[field_instance][] = node-case-field_item_id
 features[field_instance][] = node-case-field_learning_objective
 features[field_instance][] = node-case-field_link_document
@@ -56,10 +55,3 @@ features_exclude[field_base][field_document_uuid] = field_document_uuid
 features_exclude[field_base][field_author_sunet_id_reference] = field_author_sunet_id_reference
 features_exclude[field_base][field_e_copy] = field_e_copy
 features_exclude[field_base][field_paper_copy] = field_paper_copy
-
-
-; Information added by drush on 2013-12-12
-version = "WP-2354-dev"
-project = "gsb_feature_case_ct"
-datestamp = "1386888885"
-
