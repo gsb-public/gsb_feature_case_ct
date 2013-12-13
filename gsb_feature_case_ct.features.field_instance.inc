@@ -18,13 +18,13 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -69,13 +69,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'conditions' => array(),
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 14,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -115,13 +111,17 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'inline',
+        'module' => 'gsb_field_formatter',
         'settings' => array(
           'conditions' => array(),
+          'limit_depth' => 0,
+          'path_prefix' => 'taxonomy/term',
+          'separator' => ', ',
+          'tid_or_name' => 'tid',
         ),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 15,
+        'type' => 'gsb_field_formatter_path_term_separator',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -158,13 +158,13 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 12,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -208,13 +208,13 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -261,12 +261,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -311,12 +308,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 13,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -360,13 +354,10 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 19,
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -410,7 +401,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
@@ -466,7 +457,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 16,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -512,13 +503,13 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
           'conditions' => array(),
         ),
-        'type' => 'link_default',
-        'weight' => 11,
+        'type' => 'link_label',
+        'weight' => 22,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -576,13 +567,17 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
-          'conditions' => array(),
+          'conditions' => array(
+            0 => array(
+              'condition' => 'hide_link_when_title_is_empty',
+            ),
+          ),
         ),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -613,9 +608,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'rel_remove' => 'default',
-      'title' => 'none',
+      'title' => 'value',
       'title_maxlength' => 128,
-      'title_value' => '',
+      'title_value' => 'Harvard Business Publishing',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
@@ -640,13 +635,13 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 17,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -691,12 +686,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'list_default',
-        'weight' => 18,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -733,13 +725,21 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'text',
         'settings' => array(
-          'conditions' => array(),
+          'conditions' => array(
+            0 => array(
+              'condition' => 'hide_no_string',
+              'configuration' => array(
+                'string' => 'Yes',
+                'target' => 'field_paper_copy',
+              ),
+            ),
+          ),
         ),
-        'type' => 'text_default',
-        'weight' => 6,
+        'type' => 'text_plain',
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -783,12 +783,14 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
+        'label' => 'inline',
+        'module' => 'ds',
         'settings' => array(
           'conditions' => array(),
+          'taxonomy_term_link' => 0,
+          'taxonomy_term_separator' => ', ',
         ),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'ds_taxonomy_separator',
         'weight' => 9,
       ),
       'teaser' => array(
@@ -827,11 +829,11 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'date',
         'settings' => array(
           'conditions' => array(),
-          'format_type' => 'long',
+          'format_type' => 'year',
           'fromto' => 'both',
           'multiple_from' => '',
           'multiple_number' => '',
@@ -839,7 +841,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'show_repeat_rule' => 'show',
         ),
         'type' => 'date_default',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
