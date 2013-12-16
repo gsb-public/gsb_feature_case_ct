@@ -829,15 +829,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'text',
         'settings' => array(
-          'conditions' => array(
-            0 => array(
-              'condition' => 'hide_no_string',
-              'configuration' => array(
-                'string' => 'Yes',
-                'target' => 'field_paper_copy',
-              ),
-            ),
-          ),
+          'conditions' => array(),
         ),
         'type' => 'text_plain',
         'weight' => 12,

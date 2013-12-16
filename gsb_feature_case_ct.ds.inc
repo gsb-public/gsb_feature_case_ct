@@ -175,7 +175,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'lb' => ' PDF available',
           'lb-col' => TRUE,
           'ow' => TRUE,
           'ow-el' => 'div',
