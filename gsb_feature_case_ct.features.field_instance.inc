@@ -917,6 +917,49 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-case-field_product_type'
+  $field_instances['node-case-field_product_type'] = array(
+    'bundle' => 'case',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'list_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_product_type',
+    'label' => 'Product Type',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_select',
+      'weight' => 17,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-case-field_tag'
   $field_instances['node-case-field_tag'] = array(
     'bundle' => 'case',
@@ -1036,6 +1079,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
   t('Link at Harvard');
   t('Paper Copy');
   t('Permission Statement');
+  t('Product Type');
   t('Publication Year');
   t('Tag');
 
