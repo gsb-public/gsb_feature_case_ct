@@ -67,9 +67,15 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   }
 
 	if (!empty($doc->properties['cm:description']) && trim($doc->properties['cm:description']) != '') {
-		$ewrapper->field_description->set($doc->properties['cm:description']);
+    $ewrapper->field_description = array(
+      'value' => $doc->properties['cm:description'],
+      'format' => 'full_html',
+    );
 	} else {
-    $ewrapper->field_description->set('');
+    $ewrapper->field_description = array(
+      'value' => '',
+      'format' => 'full_html',
+    );
   }
   
   if (!empty($url) && trim($url) != '') {
