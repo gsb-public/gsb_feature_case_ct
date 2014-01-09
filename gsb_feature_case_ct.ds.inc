@@ -100,6 +100,21 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_author_sunet_id_reference' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'Faculty Authors',
+          'lb-col' => TRUE,
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_item_id' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -210,10 +225,10 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'case';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'left' => array(
         0 => 'title',
         1 => 'field_author',
         2 => 'field_year',
@@ -228,25 +243,30 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
         11 => 'field_permissions_statement',
         12 => 'field_link_document',
       ),
+      'right' => array(
+        13 => 'field_author_sunet_id_reference',
+      ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
-      'field_author' => 'ds_content',
-      'field_year' => 'ds_content',
-      'field_item_id' => 'ds_content',
-      'field_page_count' => 'ds_content',
-      'field_business_insight_topic' => 'ds_content',
-      'field_description' => 'ds_content',
-      'field_learning_objective' => 'ds_content',
-      'field_tag' => 'ds_content',
-      'field_citation' => 'ds_content',
-      'field_link_single' => 'ds_content',
-      'field_permissions_statement' => 'ds_content',
-      'field_link_document' => 'ds_content',
+      'title' => 'left',
+      'field_author' => 'left',
+      'field_year' => 'left',
+      'field_item_id' => 'left',
+      'field_page_count' => 'left',
+      'field_business_insight_topic' => 'left',
+      'field_description' => 'left',
+      'field_learning_objective' => 'left',
+      'field_tag' => 'left',
+      'field_citation' => 'left',
+      'field_link_single' => 'left',
+      'field_permissions_statement' => 'left',
+      'field_link_document' => 'left',
+      'field_author_sunet_id_reference' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',

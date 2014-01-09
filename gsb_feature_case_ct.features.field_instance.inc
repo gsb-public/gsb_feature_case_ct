@@ -69,9 +69,14 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
+        'module' => 'entityreference',
+        'settings' => array(
+          'conditions' => array(),
+          'links' => 1,
+          'view_mode' => 'people_fpp',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -234,7 +239,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'enable' => 0,
         'insert_plugin' => '',
       ),
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -309,12 +314,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'text',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'text_default',
-        'weight' => 13,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'teaser' => array(
         'label' => 'above',
