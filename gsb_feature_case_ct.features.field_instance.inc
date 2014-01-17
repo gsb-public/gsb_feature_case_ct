@@ -10,6 +10,49 @@
 function gsb_feature_case_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-case-field_academic_area_unlimited'
+  $field_instances['node-case-field_academic_area_unlimited'] = array(
+    'bundle' => 'case',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_academic_area_unlimited',
+    'label' => 'Academic Area',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'hs_taxonomy',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'taxonomy_hs',
+      'weight' => 10,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-case-field_author'
   $field_instances['node-case-field_author'] = array(
     'bundle' => 'case',
@@ -103,7 +146,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 5,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -138,7 +181,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_business_insight_topic',
-    'label' => 'Academic Area',
+    'label' => 'Business Insight Topic',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -150,7 +193,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'taxonomy_hs',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -201,7 +244,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 12,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -282,7 +325,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_document_name',
     'label' => 'Document Name',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'linkit' => array(
         'enable' => 0,
@@ -300,7 +343,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -347,7 +390,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 14,
     ),
     'workbench_access_field' => 0,
   );
@@ -397,7 +440,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -513,7 +556,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -581,7 +624,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 11,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -671,7 +714,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 16,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -764,7 +807,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 17,
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -811,7 +854,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -868,7 +911,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -877,6 +920,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
   t('Academic Area');
   t('Author');
   t('Author Sunet Id Reference');
+  t('Business Insight Topic');
   t('Citation');
   t('Description');
   t('Document Link');
