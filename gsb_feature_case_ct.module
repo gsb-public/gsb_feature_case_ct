@@ -183,9 +183,9 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   gsb_cmis_log('writing field_business_insight_topic', 'success');
 
-  if (!empty($doc->properties['gsb:cwoAcademicArea']) && trim($doc->properties['gsb:cwoAcademicArea']) != '') {
+  if (!empty($doc->properties['gsb:cwoBusinessTopics']) && trim($doc->properties['gsb:cwoBusinessTopics']) != '') {
     $ids = array();
-    $bi_topic = $doc->properties['gsb:cwoAcademicArea'];
+    $bi_topic = $doc->properties['gsb:cwoBusinessTopics'];
     $results = taxonomy_get_term_by_name($bi_topic);
     foreach ($results as $item) {
       if ($item->vocabulary_machine_name == 'business_insight_topic') {
@@ -195,6 +195,22 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $ewrapper->field_business_insight_topic->set($ids);
   } else {
     $ewrapper->field_business_insight_topic = array();
+  }
+
+  gsb_cmis_log('writing field_academic_area_unlimited', 'success');
+
+  if (!empty($doc->properties['gsb:cwoAcademicArea']) && trim($doc->properties['gsb:cwoAcademicArea']) != '') {
+    $ids = array();
+    $academic_area = $doc->properties['gsb:cwoAcademicArea'];
+    $results = taxonomy_get_term_by_name($academic_area);
+    foreach ($results as $item) {
+      if ($item->vocabulary_machine_name == 'academic_area') {
+        $ids[] = $item->tid;
+      }
+    }
+    $ewrapper->field_academic_area_unlimited->set($ids);
+  } else {
+    $ewrapper->field_academic_area_unlimited = array();
   }
 
   gsb_cmis_log('writing field_author_sunet_id_reference', 'success');
