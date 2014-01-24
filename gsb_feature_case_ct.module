@@ -115,12 +115,13 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   gsb_cmis_log('writing field_link_document', 'success');
   
-  $url = gsb_cmis_api_getObjectURL('default', $doc);
+  $url = trim(gsb_cmis_api_getObjectURL('default', $doc));
+  $url = _gsb_feature_case_ct_force_protocol($url);
 
-  if (!empty($url) && trim($url) != '') {
+  if (!empty($url)) {
     $ewrapper->field_link_document->url->set($url);
   } else {
-    $ewrapper->field_link_document = array();
+    $ewrapper->field_link_document->set(NULL);
   }
 
   gsb_cmis_log('writing field_author', 'success');
@@ -140,11 +141,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   }
 
   gsb_cmis_log('writing field_link_single', 'success');
+  
+  $url_harvard = trim($doc->properties['gsb:cwoLinkAtHarvard']);
+  $url_harvard = _gsb_feature_case_ct_force_protocol($url_harvard);
 
-  if (!empty($doc->properties['gsb:cwoLinkAtHarvard']) && trim($doc->properties['gsb:cwoLinkAtHarvard']) != '') {
-    $ewrapper->field_link_single->url->set($doc->properties['gsb:cwoLinkAtHarvard']);
+  if (!empty($url_harvard)) {
+    $ewrapper->field_link_single->url->set($url_harvard);
   } else {
-    $ewrapper->field_link_single = array();
+    $ewrapper->field_link_single->set(NULL);
   }
 
   gsb_cmis_log('writing field_citation', 'success');
@@ -307,4 +311,19 @@ function _gsb_feature_case_ct_add_tag_term($term, $vid) {
   $new_term->vid = $vid;
   $new_term->parent = null;
   taxonomy_term_save($new_term);
+}
+
+function _gsb_feature_case_ct_force_protocol($url_in) {
+  $url_out = $url_in;
+  if (empty($url_out)) {
+    return $url_out;
+  }
+  $pos = strpos($url_out,'http://');
+  if ($pos === false) {
+    $pos = strpos($url_out,'https://');
+    if ($pos === false) {
+      $url_out = 'http://' . $url_out;
+    }
+  }
+  return $url_out;
 }
