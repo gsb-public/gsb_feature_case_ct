@@ -273,8 +273,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
+          'trim_length' => 250,
         ),
-        'type' => 'text_default',
+        'type' => 'text_trimmed',
         'weight' => 3,
       ),
     ),
