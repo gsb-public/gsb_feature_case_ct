@@ -370,6 +370,51 @@ function gsb_feature_case_ct_ds_field_settings_info() {
   );
   $export['node|case|teaser_listing'] = $ds_fieldsetting;
 
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|case|views_content_pane';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'case';
+  $ds_fieldsetting->view_mode = 'views_content_pane';
+  $ds_fieldsetting->settings = array(
+    'case_product_type' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'field_link_document' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'lb' => 'PDF',
+          'lb-col' => TRUE,
+          'prefix' => ' | ',
+          'ow' => TRUE,
+          'ow-el' => 'span',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|case|views_content_pane'] = $ds_fieldsetting;
+
   return $export;
 }
 
@@ -387,7 +432,8 @@ function gsb_feature_case_ct_ds_custom_fields_info() {
   $ds_field->entities = array(
     'node' => 'node',
   );
-  $ds_field->ui_limit = 'case|teaser_listing';
+  $ds_field->ui_limit = 'case|teaser_listing
+case|views_content_pane';
   $ds_field->properties = array(
     'code' => array(
       'value' => '<div class="case-product-icon [node:field-product-type]"></div>',
@@ -538,6 +584,60 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
     'layout_link_custom' => '',
   );
   $export['node|case|teaser_listing'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|case|views_content_pane';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'case';
+  $ds_layout->view_mode = 'views_content_pane';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'case_product_type',
+        1 => 'title',
+        2 => 'field_link_document',
+        3 => 'field_author',
+        4 => 'field_year',
+      ),
+    ),
+    'fields' => array(
+      'case_product_type' => 'ds_content',
+      'title' => 'ds_content',
+      'field_link_document' => 'ds_content',
+      'field_author' => 'ds_content',
+      'field_year' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['node|case|views_content_pane'] = $ds_layout;
+
+  return $export;
+}
+
+/**
+ * Implements hook_ds_view_modes_info().
+ */
+function gsb_feature_case_ct_ds_view_modes_info() {
+  $export = array();
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'views_content_pane';
+  $ds_view_mode->label = 'Views content pane';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['views_content_pane'] = $ds_view_mode;
 
   return $export;
 }

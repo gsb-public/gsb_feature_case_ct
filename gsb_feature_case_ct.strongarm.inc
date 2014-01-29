@@ -82,6 +82,9 @@ function gsb_feature_case_ct_strongarm() {
       'teaser_listing' => array(
         'custom_settings' => TRUE,
       ),
+      'views_content_pane' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
