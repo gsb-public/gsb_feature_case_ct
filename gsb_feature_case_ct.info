@@ -33,6 +33,7 @@ features[ds_layout_settings][] = node|case|teaser_listing
 features[ds_layout_settings][] = node|case|views_content_pane
 features[ds_view_modes][] = views_content_pane
 features[features_api][] = api:2
+features[field_group][] = group_wrapper_taxonomy|node|case|default
 features[field_group][] = group_wrapper_topics|node|case|teaser_listing
 features[field_instance][] = node-case-field_academic_area_unlimited
 features[field_instance][] = node-case-field_author
