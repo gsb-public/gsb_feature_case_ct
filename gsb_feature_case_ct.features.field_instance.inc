@@ -42,9 +42,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
           'limit_depth' => 0,
-          'path_prefix' => 'faculty-research/faculty/academic-areas/',
+          'path_prefix' => 'faculty-research/case-studies?academic-area[]=',
           'separator' => ', ',
-          'tid_or_name' => 'name',
+          'tid_or_name' => 'tid',
         ),
         'type' => 'gsb_field_formatter_path_term_separator',
         'weight' => 7,
@@ -239,9 +239,9 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
           'limit_depth' => 0,
-          'path_prefix' => 'faculty-research/faculty/additional-topic',
+          'path_prefix' => 'faculty-research/case-studies?topics[]=',
           'separator' => ', ',
-          'tid_or_name' => 'name',
+          'tid_or_name' => 'tid',
         ),
         'type' => 'gsb_field_formatter_path_term_separator',
         'weight' => 8,
