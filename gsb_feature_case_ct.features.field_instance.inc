@@ -320,7 +320,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'more_link' => 0,
           'more_text' => '',
           'summary_handler' => 'full',
-          'trim_length' => 40,
+          'trim_length' => 35,
           'trim_options' => array(
             'text' => 0,
           ),
@@ -338,7 +338,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'more_link' => 0,
           'more_text' => '',
           'summary_handler' => 'full',
-          'trim_length' => 40,
+          'trim_length' => 35,
           'trim_options' => array(
             'text' => 0,
           ),
