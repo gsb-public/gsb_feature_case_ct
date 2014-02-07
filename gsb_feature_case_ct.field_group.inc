@@ -41,6 +41,39 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_title|node|case|views_content_pane';
+  $field_group->group_name = 'group_wrapper_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'case';
+  $field_group->mode = 'views_content_pane';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_link_document',
+      1 => 'case_product_type',
+      2 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_title|node|case|views_content_pane'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_wrapper_topics|node|case|teaser_listing';
   $field_group->group_name = 'group_wrapper_topics';
   $field_group->entity_type = 'node';

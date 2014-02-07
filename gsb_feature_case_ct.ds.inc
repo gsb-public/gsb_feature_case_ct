@@ -383,12 +383,18 @@ function gsb_feature_case_ct_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'views_content_pane';
   $ds_fieldsetting->settings = array(
     'case_product_type' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'conditions' => array(),
+      ),
     ),
     'title' => array(
-      'weight' => '1',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -604,14 +610,16 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'case_product_type',
-        1 => 'title',
-        2 => 'field_link_document',
-        3 => 'field_author',
-        4 => 'field_year',
+        0 => 'group_wrapper_title',
+        1 => 'case_product_type',
+        2 => 'title',
+        3 => 'field_link_document',
+        4 => 'field_author',
+        5 => 'field_year',
       ),
     ),
     'fields' => array(
+      'group_wrapper_title' => 'ds_content',
       'case_product_type' => 'ds_content',
       'title' => 'ds_content',
       'field_link_document' => 'ds_content',
