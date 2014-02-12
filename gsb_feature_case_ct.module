@@ -153,6 +153,16 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   } else {
     $ewrapper->field_link_single->set(NULL);
   }
+  
+  gsb_cmis_log('writing field_link_center_single', 'success');
+
+  $url_casecenter = trim($doc->properties['gsb:cwoECopy']);
+  if (!empty($url_casecenter)) {
+    $url_casecenter = _gsb_feature_case_ct_force_protocol($url_casecenter);
+    $ewrapper->field_link_center_single->url->set($url_casecenter);
+  } else {
+    $ewrapper->field_link_center_single->set(NULL);
+  }  
 
   gsb_cmis_log('writing field_citation', 'success');
 
