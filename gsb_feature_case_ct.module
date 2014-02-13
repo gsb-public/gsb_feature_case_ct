@@ -123,7 +123,11 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $url = trim(gsb_cmis_api_getObjectURL('default', $doc));
   if (!empty($url)) {
     $url = _gsb_feature_case_ct_force_protocol($url);
-    $ewrapper->field_link_document->url->set($url);
+    if (valid_url($url, TRUE)) {
+      $ewrapper->field_link_document->url->set($url);
+    } else {
+      $ewrapper->field_link_document->set(NULL);
+    }
   } else {
     $ewrapper->field_link_document->set(NULL);
   }
@@ -149,7 +153,11 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $url_harvard = trim($doc->properties['gsb:cwoLinkAtHarvard']);
   if (!empty($url_harvard)) {
     $url_harvard = _gsb_feature_case_ct_force_protocol($url_harvard);
-    $ewrapper->field_link_single->url->set($url_harvard);
+    if (valid_url($url_harvard, TRUE)) {
+      $ewrapper->field_link_single->url->set($url_harvard);
+    } else {
+      $ewrapper->field_link_single->set(NULL);
+    }    
   } else {
     $ewrapper->field_link_single->set(NULL);
   }
@@ -159,10 +167,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $url_casecenter = trim($doc->properties['gsb:cwoECopy']);
   if (!empty($url_casecenter)) {
     $url_casecenter = _gsb_feature_case_ct_force_protocol($url_casecenter);
-    $ewrapper->field_link_center_single->url->set($url_casecenter);
+    if (valid_url($url_casecenter, TRUE)) {
+      $ewrapper->field_link_center_single->url->set($url_casecenter);
+    } else {
+      $ewrapper->field_link_center_single->set(NULL);
+    }      
   } else {
     $ewrapper->field_link_center_single->set(NULL);
-  }  
+  }   
 
   gsb_cmis_log('writing field_citation', 'success');
 
