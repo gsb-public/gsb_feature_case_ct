@@ -211,6 +211,19 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_link_center_single' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
   );
   $export['node|case|default'] = $ds_fieldsetting;
 
