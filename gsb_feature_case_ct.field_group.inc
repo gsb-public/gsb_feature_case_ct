@@ -13,6 +13,38 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_paper_copy|node|case|default';
+  $field_group->group_name = 'group_wrapper_paper_copy';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'case';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Available for purchase',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_link_single',
+      1 => 'field_link_center_single',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Available for purchase',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '1',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_paper_copy|node|case|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_wrapper_taxonomy|node|case|default';
   $field_group->group_name = 'group_wrapper_taxonomy';
   $field_group->entity_type = 'node';
