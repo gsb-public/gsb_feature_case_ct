@@ -32,12 +32,16 @@ function gsb_feature_case_ct_gsb_cmis_content_type_import_info() {
  */
 function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 0');
+
   global $user;
 
   // Check if the Product Type has been set. If not, bail.
   if (empty($doc->properties['gsb:cwoProductType']) || trim($doc->properties['gsb:cwoProductType']) == '') {
     return;
   }
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1');
 
   // Valid Product Types for 'Case' Content type are either:
   //   Case
@@ -47,6 +51,8 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   if ($product_type != 'Case' && $product_type != 'Online Cases' && $product_type != 'Video Cases' ) {
     return;
   }
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 2');  
 
   // Attempt to find a node with the document uuid
   $query = new EntityFieldQuery();
@@ -69,10 +75,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $node = entity_create('node', $values);
   }
 
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 3');
+
   // if the node isn't a Case, then bail
   if ($node->type != 'case') {
     return;
   }
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 4');  
 
   gsb_cmis_log('uuid = '.$uuid, 'success');
 
@@ -290,6 +300,8 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   }
 
   gsb_cmis_log('saving node', 'success');
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 5');
 
   $ewrapper->save();
   
