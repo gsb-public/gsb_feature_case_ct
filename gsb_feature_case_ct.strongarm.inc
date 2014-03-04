@@ -104,7 +104,14 @@ function gsb_feature_case_ct_strongarm() {
           'weight' => '17',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'gsb_feature_base_fields_faculty_authors' => array(
+          'default' => array(
+            'weight' => '13',
+            'visible' => TRUE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__case'] = $strongarm;
