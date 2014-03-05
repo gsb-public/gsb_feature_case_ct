@@ -147,61 +147,6 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_author_sunet_id_reference'
-  $field_instances['node-case-field_author_sunet_id_reference'] = array(
-    'bundle' => 'case',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
-      ),
-      'teaser_listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
-      ),
-      'views_content_pane' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 25,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_author_sunet_id_reference',
-    'label' => 'Author Sunet Id Reference',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 4,
-    ),
-    'workbench_access_field' => 0,
-  );
-
   // Exported field_instance: 'node-case-field_authors'
   $field_instances['node-case-field_authors'] = array(
     'bundle' => 'case',
@@ -1398,7 +1343,6 @@ function gsb_feature_case_ct_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Academic Area');
   t('Author');
-  t('Author Sunet Id Reference');
   t('Authors');
   t('Business Insight Topic');
   t('Case Center');
