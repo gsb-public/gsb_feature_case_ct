@@ -92,7 +92,7 @@ function gsb_feature_case_ct_strongarm() {
           'weight' => '23',
         ),
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'path' => array(
           'weight' => '22',
