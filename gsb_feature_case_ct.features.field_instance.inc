@@ -62,6 +62,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Academic Area',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -126,6 +128,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Author',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -185,6 +189,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Authors',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -251,6 +257,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Additional Topics',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -306,6 +314,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Citation',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -393,6 +403,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -454,6 +466,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Document Name',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -513,6 +527,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Document UUID',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -542,7 +558,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
@@ -575,6 +591,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Item ID',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -637,6 +655,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Learning Objective',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -708,6 +728,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -790,6 +812,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -866,6 +890,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'target' => '_blank',
         'title' => '',
       ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'display' => array(
         'url_cutoff' => 80,
       ),
@@ -902,7 +928,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
           'conditions' => array(),
@@ -935,6 +961,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Length',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -994,6 +1022,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Paper Copy',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1049,6 +1079,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Permission Statement',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
@@ -1108,6 +1140,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Product Type',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1159,6 +1193,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Search field',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'selected_fields' => array(
         'concat_field_entity_label' => 'concat_field_entity_label',
         'field_academic_area_unlimited' => 'field_academic_area_unlimited',
@@ -1202,9 +1238,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => NULL,
         'settings' => array(),
-        'type' => 'submit_field_default',
+        'type' => 'hidden',
         'weight' => 27,
       ),
       'teaser' => array(
@@ -1232,6 +1267,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Submit',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1289,6 +1326,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Keywords',
     'required' => 0,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1368,6 +1407,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Publication Year',
     'required' => FALSE,
     'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
       'default_value' => 'now',
       'default_value2' => 'same',
       'default_value_code' => '',
