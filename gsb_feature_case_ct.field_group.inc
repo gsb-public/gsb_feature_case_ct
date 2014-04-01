@@ -52,7 +52,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Taxonomy wrapper',
+    'label' => 'Tagging',
     'weight' => '5',
     'children' => array(
       0 => 'field_business_insight_topic',

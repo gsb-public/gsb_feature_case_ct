@@ -248,7 +248,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_business_insight_topic',
-    'label' => 'Business Insight Topic',
+    'label' => 'Additional Topics',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1286,7 +1286,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_tag',
-    'label' => 'Tag',
+    'label' => 'Keywords',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1396,7 +1396,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
   t('Academic Area');
   t('Author');
   t('Authors');
-  t('Business Insight Topic');
+  t('Additional Topics');
   t('Case Center');
   t('Citation');
   t('Description');
@@ -1413,7 +1413,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
   t('Publication Year');
   t('Search field');
   t('Submit');
-  t('Tag');
+  t('Keywords');
 
   return $field_instances;
 }
