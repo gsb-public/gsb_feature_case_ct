@@ -292,8 +292,6 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   gsb_cmis_log('writing field_free_case', 'success');
 
-  dpm($doc->properties);
-
   if (!empty($doc->properties['gsb:cwoFreeCase']) && trim($doc->properties['gsb:cwoFreeCase']) != '') {
     gsb_cmis_log('free case = '.$doc->properties['gsb:cwoFreeCase'], 'success');
     $ewrapper->field_free_case->set($doc->properties['gsb:cwoFreeCase']);
