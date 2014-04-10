@@ -140,20 +140,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_permissions_statement' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'lb-col' => TRUE,
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_tag' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -483,12 +469,11 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
         11 => 'field_citation',
         12 => 'group_wrapper_paper_copy',
         13 => 'field_link_single',
-        14 => 'field_permissions_statement',
+        14 => 'field_link_document',
         15 => 'field_link_center_single',
-        16 => 'field_link_document',
       ),
       'right' => array(
-        17 => 'gsb_feature_base_fields_faculty_authors',
+        16 => 'gsb_feature_base_fields_faculty_authors',
       ),
     ),
     'fields' => array(
@@ -506,9 +491,8 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'field_citation' => 'left',
       'group_wrapper_paper_copy' => 'left',
       'field_link_single' => 'left',
-      'field_permissions_statement' => 'left',
-      'field_link_center_single' => 'left',
       'field_link_document' => 'left',
+      'field_link_center_single' => 'left',
       'gsb_feature_base_fields_faculty_authors' => 'right',
     ),
     'classes' => array(),
