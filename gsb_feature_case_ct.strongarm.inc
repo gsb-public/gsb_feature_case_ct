@@ -110,6 +110,14 @@ function gsb_feature_case_ct_strongarm() {
             'weight' => '13',
             'visible' => TRUE,
           ),
+          'views_content_pane' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'teaser_listing' => array(
+            'weight' => '0',
+            'visible' => FALSE,
+          ),
         ),
       ),
     ),

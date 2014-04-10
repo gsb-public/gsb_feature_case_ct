@@ -844,20 +844,14 @@ function gsb_feature_case_ct_field_default_field_instances() {
       ),
       'teaser_listing' => array(
         'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'link_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'views_content_pane' => array(
         'label' => 'hidden',
-        'module' => 'link',
-        'settings' => array(
-          'conditions' => array(),
-        ),
-        'type' => 'link_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
     ),
