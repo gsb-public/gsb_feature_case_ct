@@ -83,9 +83,8 @@ function gsb_feature_case_ct_field_group_info() {
     'label' => 'Title wrapper',
     'weight' => '0',
     'children' => array(
-      0 => 'field_link_document',
-      1 => 'case_product_type',
-      2 => 'title',
+      0 => 'case_product_type',
+      1 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
