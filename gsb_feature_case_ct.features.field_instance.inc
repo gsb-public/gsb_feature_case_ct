@@ -803,7 +803,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
       'title' => 'value',
       'title_label_use_field_label' => FALSE,
       'title_maxlength' => 128,
-      'title_value' => 'Case Centre',
+      'title_value' => 'The Case Centre',
       'url' => 0,
       'user_register_form' => FALSE,
       'validate_url' => 1,
