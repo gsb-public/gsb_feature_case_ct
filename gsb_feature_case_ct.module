@@ -165,14 +165,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $url_harvard = _gsb_feature_case_ct_force_protocol($url_harvard);
     if (valid_url($url_harvard, TRUE)) {
       $ewrapper->field_link_single->url->set($url_harvard);
-      $ewrapper->field_has_harvard_link->set("Yes");
+      $ewrapper->field_has_harvard_link->set("1");
     } else {
       $ewrapper->field_link_single->set(NULL);
-      $ewrapper->field_has_harvard_link->set("No");
+      $ewrapper->field_has_harvard_link->set("0");
     }    
   } else {
     $ewrapper->field_link_single->set(NULL);
-    $ewrapper->field_has_harvard_link->set("No");
+    $ewrapper->field_has_harvard_link->set("0");
   }
   
   gsb_cmis_log('writing field_link_center_single', 'success');
@@ -182,14 +182,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $url_casecenter = _gsb_feature_case_ct_force_protocol($url_casecenter);
     if (valid_url($url_casecenter, TRUE)) {
       $ewrapper->field_link_center_single->url->set($url_casecenter);
-      $ewrapper->field_has_case_center->set("Yes");
+      $ewrapper->field_has_case_center->set("1");
     } else {
       $ewrapper->field_link_center_single->set(NULL);
-      $ewrapper->field_has_case_center->set("No");
+      $ewrapper->field_has_case_center->set("0");
     }      
   } else {
     $ewrapper->field_link_center_single->set(NULL);
-    $ewrapper->field_has_case_center->set("No");
+    $ewrapper->field_has_case_center->set("0");
   }   
 
   gsb_cmis_log('writing field_citation', 'success');
@@ -298,12 +298,12 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   gsb_cmis_log('writing field_free_case', 'success');
 
-  $ewrapper->field_free_case->set("No");
+  $ewrapper->field_free_case->set("0");
   if (!empty($doc->properties['gsb:cwoFreeCase']) && trim($doc->properties['gsb:cwoFreeCase']) != '') {
     gsb_cmis_log('free case = '.$doc->properties['gsb:cwoFreeCase'], 'success');
     //$ewrapper->field_free_case->set($doc->properties['gsb:cwoFreeCase']);
     if ($doc->properties['gsb:cwoFreeCase'] == 'true') {
-      $ewrapper->field_free_case->set("Yes");
+      $ewrapper->field_free_case->set("1");
     }
   } 
 
