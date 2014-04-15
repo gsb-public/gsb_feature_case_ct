@@ -616,7 +616,11 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'bundle' => 'case',
     'custom_add_another' => '',
     'custom_remove' => '',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
