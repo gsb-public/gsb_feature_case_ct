@@ -7,6 +7,15 @@
 include_once 'gsb_feature_case_ct.features.inc';
 
 /**
+ * Implements hook_form_FORM_ID_alter() for working paper node edit form.
+ */
+function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
+  $form['field_document_uuid']['#disabled'] = TRUE;
+  $form['field_link_document']['#disabled'] = TRUE;
+  $form['field_document_name']['#disabled'] = TRUE;
+}  
+
+/**
  * Sets up a callback function for handling the cmis import
  */
 function gsb_feature_case_ct_gsb_cmis_content_type_import_info() {
@@ -32,7 +41,21 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     return;
   }
 
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1');
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1a'); 
+
+  // Check if the Paper has been set. If not, bail.
+  if (empty($doc->properties['gsb:cwoPaperCopy']) || trim($doc->properties['gsb:cwoPaperCopy']) == '') {
+    return;
+  }
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1b');
+
+  // Check if the Paper has been set 'No' then bail.
+  if ($doc->properties['gsb:cwoPaperCopy'] == 'No') {
+    return;
+  }  
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1c');
 
   // Valid Product Types for 'Case' Content type are either:
   //   Case
