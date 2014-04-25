@@ -50,8 +50,9 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1b');
 
-  // Check if the Paper has been set 'No' then bail.
+  // Check if the Paper has been set 'No' then delete and bail.
   if ($doc->properties['gsb:cwoPaperCopy'] == 'No') {
+    _gsb_feature_case_ct_delete_case($uuid);
     return;
   }  
 
@@ -533,5 +534,20 @@ function _gsb_feature_case_ct_add_author($node, $entity_id) {
   $field_collection_item->field_last_name = array();
 
   $field_collection_item->save();
+
+}
+
+function _gsb_feature_case_ct_delete_case($uuid) {
+
+  // Attempt to find a node with the document uuid
+  $query = new EntityFieldQuery();
+  $query->fieldCondition('field_document_uuid', 'value', $uuid, '=')->range(0, 1);
+  $entities = $query->execute();
+
+  if (!empty($entities['node'])) {
+    // a node already exists, so delete it
+    $nids = array_keys($entities['node']);
+    node_delete(array_shift($nids));
+  }
 
 }
