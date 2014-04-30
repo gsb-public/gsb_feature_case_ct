@@ -7,7 +7,7 @@
 include_once 'gsb_feature_case_ct.features.inc';
 
 /**
- * Implements hook_form_FORM_ID_alter() for working paper node edit form.
+ * Implements hook_form_FORM_ID_alter() for case node edit form.
  */
 function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
   $form['field_document_uuid']['#disabled'] = TRUE;
@@ -96,6 +96,8 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   if ($node->type != 'case') {
     return;
   }
+
+  $language = $node->language;
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 4');  
 
@@ -316,22 +318,13 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   gsb_cmis_log('writing sunet field_authors', 'success');
 
-  if (!empty($doc->properties['gsb:authorsSunetId']) && trim($doc->properties['gsb:authorsSunetId']) != '') {
-    _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc);
-  }
-
-  gsb_cmis_log('writing other field_authors', 'success');
-
-  if (!empty($doc->properties['cm:author']) && trim($doc->properties['cm:author']) != '') {
-    _gsb_feature_case_ct_import_other_authors($node,$doc);
-  }   
+  _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc);
 
   gsb_cmis_log('writing field_free_case', 'success');
 
   $ewrapper->field_free_case->set("0");
   if (!empty($doc->properties['gsb:cwoFreeCase']) && trim($doc->properties['gsb:cwoFreeCase']) != '') {
     gsb_cmis_log('free case = '.$doc->properties['gsb:cwoFreeCase'], 'success');
-    //$ewrapper->field_free_case->set($doc->properties['gsb:cwoFreeCase']);
     if ($doc->properties['gsb:cwoFreeCase'] == 'true') {
       $ewrapper->field_free_case->set("1");
     }
@@ -342,7 +335,31 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 5');
 
   $ewrapper->save();
+
+  // @todo there maybe a better way to handle the following, but
+  // I couldn't seem to get $ewrapper->field_authors->set()
+  // and properly update the node's field collection.
+
+  // get the new list of authors saved with the node
+  $authors = $ewrapper->field_authors->value();
   
+  // update the list to remove any field collections that
+  // have been deleted and then save the node
+  if (!empty($authors)) {
+    unset($node->field_authors[$language]);
+    $node->field_authors[$language] = array();
+    foreach($authors as $key => $author) {
+      if ($author == null) {
+        // skipping the deleted item
+        continue;
+      }
+      $node->field_authors[$language][] = array('revision_id' => $author->revision_id, 'value' => $author->item_id);
+    }
+    node_save($node);
+  }
+
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 6');
+
 }
 
 /**
@@ -465,22 +482,23 @@ function _gsb_feature_case_ct_getTags($uuid) {
  */
 function _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc) {
 
-  // get the list of sunetids from Alfresco's returned data
-  $sunet_ids = array_map('trim', explode(',', $doc->properties['gsb:authorsSunetId']));
-
-  // lookup the node ids related to these ids
-  $query = db_select('field_data_field_sunetid', 'su');
-  $query->fields('su', array('bundle', 'entity_id', 'field_sunetid_value'));
-  $query->condition('su.field_sunetid_value',$sunet_ids,'IN');
-  $result = $query->execute();
-
   // gather a list of entity ids to add and remove
   $add_entity_ids = array();
   $del_field_collection_items = array();
 
-  // start by putting all these node ids in the add list
-  foreach ($result as $record) {
-    $add_entity_ids[$record->entity_id] = $record->entity_id;
+  // get the list of sunetids from Alfresco's returned data
+  $sunet_ids = array();
+  if (!empty($doc->properties['gsb:authorsSunetId']) && trim($doc->properties['gsb:authorsSunetId']) != '') {
+    $sunet_ids = array_map('trim', explode(',', $doc->properties['gsb:authorsSunetId']));
+    // lookup the node ids related to these ids
+    $query = db_select('field_data_field_sunetid', 'su');
+    $query->fields('su', array('bundle', 'entity_id', 'field_sunetid_value'));
+    $query->condition('su.field_sunetid_value',$sunet_ids,'IN');
+    $result = $query->execute();
+    // start by putting all these node ids in the add list
+    foreach ($result as $record) {
+      $add_entity_ids[$record->entity_id] = $record->entity_id;
+    }    
   }
 
   // get the current list of authors saved with the node
@@ -522,7 +540,7 @@ function _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc) {
 
   // add any new authors that came for the sunetids
   foreach ($add_entity_ids as $entity_id) {
-    _gsb_feature_working_paper_ct_add_author($node, $entity_id);
+    _gsb_feature_case_ct_add_author($node, $entity_id);
   }  
 
   // delete any authors that are no longer sunetids in Alfresco
@@ -531,105 +549,6 @@ function _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc) {
   }
 
 }  
-
-/**
- * Get 'Other Authors' from the Alfresco doc properties
- */
-function _gsb_feature_case_ct_import_other_authors($node,$doc) {
-
-  $language = $node->language;
-
-  // get the list of sunetids from Alfresco's returned data
-  $sunet_ids = array();
-  if (!empty($doc->properties['gsb:authorsSunetId']) && trim($doc->properties['gsb:authorsSunetId']) != '') {
-    $sunet_ids = array_map('trim', explode(',', $doc->properties['gsb:authorsSunetId']));
-  }
-
-  // get the current list of authors saved with the node
-  $ewrapper = entity_metadata_wrapper('node', $node);
-  $current_authors = $ewrapper->field_authors->value();
-
-  $other_authors = $doc->properties['cm:author'];
-  $other_authors = explode(',', $other_authors);
-
-  // loop thru the list of current authors
-  // and remove any that are not in the list
-  // of other authors from Alfresco
-  foreach($current_authors as $author) {
-    $ewrap_author = entity_metadata_wrapper('field_collection_item', $author);
-    $fn = $ewrap_author->field_first_name->value();
-    $ln = $ewrap_author->field_last_name->value();
-    $ref = $ewrap_author->field_person_fac_single_ref->value();
-    $author_node = null;
-    if ($ref) {
-      $authors_nid = $ref->nid;
-      $author_node = node_load($authors_nid);
-      $fn = $author_node->field_first_name['und'][0]['value'];
-      $ln = $author_node->field_last_name['und'][0]['value'];
-    }
-    $found = false;
-    foreach($other_authors as $other_author) {
-      $other_author = trim($other_author);
-      $other_author = explode(' ',$other_author);
-      $first_name = $other_author[0];
-      $last_name = $other_author[1];
-      if ($fn == $first_name && $ln == $last_name) {
-        $found = true;
-        break;
-      }
-    }
-    if (!$found) {
-      if ($author_node && !empty($sunet_ids)) {
-        // give it one last try to see if the author is in the list of sunetids on Alfresco
-        $sunetid = '';
-        if (!empty($author_node->field_sunetid[$language][0])) {
-          $sunetid = $author_node->field_sunetid[$language][0]['value'];
-        }
-        if (in_array($sunetid, $sunet_ids)) {
-          $found = true;
-        }
-      }
-      if (!$found) {
-        //dpm('remove first_name = '.$fn.' last_name = '+$ln);
-        $author->delete();
-      }
-    }
-  }
-
-  // loop thru the list of other authors
-  // and add any that are not in the list
-  // of current authors
-  foreach($other_authors as $other_author) {
-    $other_author = trim($other_author);
-    $other_author = explode(' ',$other_author);
-    $first_name = $other_author[0];
-    $last_name = $other_author[1];
-    $found = false;
-    if (empty($ewrapper->field_authors)) {
-      // add any all other authors
-    } else {
-      foreach($current_authors as $author) {
-        $ewrap_author = entity_metadata_wrapper('field_collection_item', $author);
-        $fn = $ewrap_author->field_first_name->value();
-        $ln = $ewrap_author->field_last_name->value();
-        $ref = $ewrap_author->field_person_fac_single_ref->value();
-        if ($ref) {
-          $authors_nid = $ref->nid;
-          $author_node = node_load($authors_nid);
-          $fn = $author_node->field_first_name['und'][0]['value'];
-          $ln = $author_node->field_last_name['und'][0]['value'];
-        }
-        if ($fn == $first_name && $ln == $last_name) {
-          $found = true;
-          break;
-        }
-      }
-    }
-    if (!$found) {
-      _gsb_feature_case_ct_add_other_author($node, $first_name, $last_name);
-    }
-  }
-}
 
 /**
  * Add an author entity ref (via field_authors field collection) 
@@ -650,6 +569,10 @@ function _gsb_feature_case_ct_add_author($node, $entity_id) {
 
   $field_collection_item->field_first_name = array();
   $field_collection_item->field_last_name = array();
+
+  $field_collection_item->field_profile_visibility = array(
+    'und' => array(array('value' => '1')),
+  );
 
   $field_collection_item->save();
 
