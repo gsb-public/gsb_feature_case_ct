@@ -334,6 +334,9 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 5');
 
+  $node->status = 1;
+  $node->workbench_moderation['updating_live_revision'] = 1;
+
   $ewrapper->save();
 
   // @todo there maybe a better way to handle the following, but
