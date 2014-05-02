@@ -119,6 +119,18 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
         ),
+        'gsb_cmis_download_button' => array(
+          'default' => array(
+            'weight' => '12',
+            'visible' => TRUE,
+          ),
+        ),
+        'gsb_feature_case_ct_pdf_statement' => array(
+          'default' => array(
+            'weight' => '11',
+            'visible' => TRUE,
+          ),
+        ),
       ),
     ),
   );
