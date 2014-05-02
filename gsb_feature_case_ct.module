@@ -656,7 +656,7 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     // "Paper Copy" = "Abstract only" display statement (3)
     if (!empty($node->field_paper_copy['und'][0]) && $node->field_paper_copy['und'][0]['value'] == 'Abstract Only') {
       $node->content['gsb_feature_case_ct_pdf_statement'] = array(
-        '#markup' => '<span class="gsb-feature-case-ct-pdf-statement">' . t('PDF restricted.') . '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' . t(' Contact Us.') . '</a>' . '</span>',
+        '#markup' => '<span class="gsb-feature-case-ct-pdf-statement">' . t('PDF restricted. ') . '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' . t('Contact Us.') . '</a>' . '</span>',
       );
     }
     // "Paper Copy" = "Yes" AND Free Case checkbox is checked (value true) display statement (1)
