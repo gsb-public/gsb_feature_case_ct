@@ -334,14 +334,13 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 5');
 
-  $node->status = 1;
-  $node->workbench_moderation['updating_live_revision'] = 1;
-
   $ewrapper->save();
 
   // @todo there maybe a better way to handle the following, but
   // I couldn't seem to get $ewrapper->field_authors->set()
   // and properly update the node's field collection.
+
+  $node = node_load($node->nid);
 
   // get the new list of authors saved with the node
   $authors = $ewrapper->field_authors->value();
@@ -358,8 +357,12 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
       }
       $node->field_authors[$language][] = array('revision_id' => $author->revision_id, 'value' => $author->item_id);
     }
-    node_save($node);
   }
+
+  $node->status = 1;
+  $node->workbench_moderation['updating_live_revision'] = 1;
+
+  node_save($node);  
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 6');
 
