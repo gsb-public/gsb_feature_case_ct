@@ -341,6 +341,8 @@ function gsb_feature_case_ct_field_default_field_instances() {
   // Exported field_instance: 'node-case-field_description'
   $field_instances['node-case-field_description'] = array(
     'bundle' => 'case',
+    'custom_add_another' => '',
+    'custom_remove' => '',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -409,7 +411,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'enable' => 0,
         'insert_plugin' => '',
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
