@@ -113,7 +113,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Topic',
-    'weight' => '7',
+    'weight' => '6',
     'children' => array(
       0 => 'field_business_insight_topic',
       1 => 'field_academic_area_unlimited',

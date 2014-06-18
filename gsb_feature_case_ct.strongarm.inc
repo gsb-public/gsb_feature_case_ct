@@ -115,7 +115,7 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'teaser_listing' => array(
-            'weight' => '0',
+            'weight' => '12',
             'visible' => FALSE,
           ),
         ),
@@ -124,11 +124,19 @@ function gsb_feature_case_ct_strongarm() {
             'weight' => '12',
             'visible' => TRUE,
           ),
+          'teaser_listing' => array(
+            'weight' => '7',
+            'visible' => FALSE,
+          ),
         ),
         'gsb_feature_case_ct_pdf_statement' => array(
           'default' => array(
             'weight' => '11',
             'visible' => TRUE,
+          ),
+          'teaser_listing' => array(
+            'weight' => '8',
+            'visible' => FALSE,
           ),
         ),
       ),
