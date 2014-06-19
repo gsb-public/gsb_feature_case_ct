@@ -405,6 +405,36 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'full_html' => 0,
+          'gsb_html_text' => 0,
+          'gsb_wysiwyg_text' => 'gsb_wysiwyg_text',
+          'plain_text' => 0,
+          'slideshow' => 0,
+        ),
+        'allowed_formats_toggle' => 1,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'full_html' => array(
+              'weight' => 1,
+            ),
+            'gsb_html_text' => array(
+              'weight' => -9,
+            ),
+            'gsb_wysiwyg_text' => array(
+              'weight' => -10,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+            'slideshow' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
       'custom_add_another' => '',
       'custom_remove' => '',
       'linkit' => array(
@@ -1375,14 +1405,14 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'concat_field_entity_label' => 'concat_field_entity_label',
         'field_academic_area_unlimited' => 'field_academic_area_unlimited',
         'field_author' => 'field_author',
-        'field_authors' => 'field_authors',
         'field_author_sunet_id_reference' => 0,
+        'field_authors' => 'field_authors',
         'field_business_insight_topic' => 'field_business_insight_topic',
         'field_citation' => 'field_citation',
         'field_description' => 'field_description',
-        'field_item_id' => 'field_item_id',
         'field_document_name' => 0,
         'field_document_uuid' => 0,
+        'field_item_id' => 'field_item_id',
         'field_learning_objective' => 'field_learning_objective',
         'field_link_document' => 0,
         'field_link_single' => 0,

@@ -1,7 +1,7 @@
 name = GSB Feature Case Content Type
 core = 7.x
 package = GSB
-version = 7.x-3.6
+version = 7.x-3.13
 project = gsb_feature_case_ct
 dependencies[] = concat_field
 dependencies[] = ctools
@@ -22,7 +22,7 @@ dependencies[] = strongarm
 dependencies[] = submit_field
 dependencies[] = taxonomy
 dependencies[] = text
-datestamp = 1392246337
+datestamp = 1403136941
 features[ctools][] = ds:ds:1
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
