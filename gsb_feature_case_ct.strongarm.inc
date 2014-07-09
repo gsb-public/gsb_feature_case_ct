@@ -88,6 +88,9 @@ function gsb_feature_case_ct_strongarm() {
       'idea_story_related' => array(
         'custom_settings' => TRUE,
       ),
+      'insight_featured_card' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -125,6 +128,10 @@ function gsb_feature_case_ct_strongarm() {
             'weight' => '21',
             'visible' => FALSE,
           ),
+          'insight_featured_card' => array(
+            'weight' => '21',
+            'visible' => FALSE,
+          ),
         ),
         'gsb_cmis_download_button' => array(
           'default' => array(
@@ -139,6 +146,10 @@ function gsb_feature_case_ct_strongarm() {
             'weight' => '19',
             'visible' => FALSE,
           ),
+          'insight_featured_card' => array(
+            'weight' => '19',
+            'visible' => FALSE,
+          ),
         ),
         'gsb_feature_case_ct_pdf_statement' => array(
           'default' => array(
@@ -150,6 +161,10 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'idea_story_related' => array(
+            'weight' => '17',
+            'visible' => FALSE,
+          ),
+          'insight_featured_card' => array(
             'weight' => '17',
             'visible' => FALSE,
           ),

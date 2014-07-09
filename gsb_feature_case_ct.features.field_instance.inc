@@ -36,6 +36,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 12,
       ),
+      'insight_featured_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 12,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -101,6 +107,15 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 1,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
@@ -185,6 +200,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 29,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -247,6 +268,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 7,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -322,6 +349,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 16,
       ),
+      'insight_featured_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -390,6 +423,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 6,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -518,6 +557,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 26,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -580,6 +625,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 23,
       ),
       'idea_story_related' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
+      'insight_featured_card' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -658,6 +709,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 31,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -720,6 +777,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 31,
       ),
       'idea_story_related' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
+      'insight_featured_card' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -792,6 +855,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 32,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -851,6 +920,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 3,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -929,6 +1004,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -996,6 +1077,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 12,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -1078,6 +1165,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 21,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
@@ -1168,6 +1261,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 18,
       ),
+      'insight_featured_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1253,6 +1352,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 10,
       ),
+      'insight_featured_card' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1320,6 +1425,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 27,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1375,6 +1486,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 20,
       ),
       'idea_story_related' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
+      'insight_featured_card' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
@@ -1447,6 +1564,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 24,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1501,6 +1624,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 26,
       ),
       'idea_story_related' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
+      'insight_featured_card' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -1587,6 +1716,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
@@ -1647,6 +1782,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 8,
       ),
       'idea_story_related' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'insight_featured_card' => array(
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
@@ -1717,6 +1858,12 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'weight' => 2,
       ),
       'idea_story_related' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'insight_featured_card' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
