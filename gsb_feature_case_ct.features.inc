@@ -33,5 +33,6 @@ function gsb_feature_case_ct_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }
