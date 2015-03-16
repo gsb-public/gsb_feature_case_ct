@@ -49,6 +49,7 @@ features[field_instance][] = node-case-field_academic_area_unlimited
 features[field_instance][] = node-case-field_author
 features[field_instance][] = node-case-field_authors
 features[field_instance][] = node-case-field_business_insight_topic
+features[field_instance][] = node-case-field_case_access
 features[field_instance][] = node-case-field_citation
 features[field_instance][] = node-case-field_description
 features[field_instance][] = node-case-field_document_name

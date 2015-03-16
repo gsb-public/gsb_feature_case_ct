@@ -13,7 +13,8 @@ function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
   $form['field_document_uuid']['#disabled'] = TRUE;
   $form['field_link_document']['#disabled'] = TRUE;
   $form['field_document_name']['#disabled'] = TRUE;
-}  
+  $form['field_case_access']['#disabled'] = TRUE;
+}
 
 /**
  * Sets up a callback function for handling the cmis import
@@ -41,7 +42,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     return;
   }
 
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1a'); 
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1a');
 
   // Check if the Paper has been set. If not, bail.
   if (empty($doc->properties['gsb:cwoPaperCopy']) || trim($doc->properties['gsb:cwoPaperCopy']) == '') {
@@ -54,7 +55,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   if ($doc->properties['gsb:cwoPaperCopy'] == 'No') {
     _gsb_feature_case_ct_delete_case($uuid);
     return;
-  }  
+  }
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1c');
 
@@ -67,7 +68,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     return;
   }
 
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 2');  
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 2');
 
   // Attempt to find a node with the document uuid
   $query = new EntityFieldQuery();
@@ -99,7 +100,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   $language = $node->language;
 
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 4');  
+  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 4');
 
   gsb_cmis_log('uuid = '.$uuid, 'success');
 
@@ -119,7 +120,15 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
       $ewrapper->title->set($doc->properties['cmis:contentStreamFileName']);
     } else {
       $ewrapper->title->set('no title');
-    }  
+    }
+  }
+
+  gsb_cmis_log('writing field_case_access', 'success');
+
+  if (!empty($doc->properties['gsb:cwoAccess']) && trim($doc->properties['gsb:cwoAccess']) != '') {
+    $ewrapper->field_case_access->set($doc->properties['gsb:cwoAccess']);
+  } else {
+    $ewrapper->field_case_access->set('Not for distribution');
   }
 
   gsb_cmis_log('writing field_year', 'success');
@@ -144,7 +153,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $ewrapper->field_document_name->set($doc->properties['cmis:contentStreamFileName']);
   } else {
     $ewrapper->field_document_name->set(NULL);
-  }  
+  }
 
   gsb_cmis_log('writing field_description', 'success');
 
@@ -161,7 +170,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   }
 
   gsb_cmis_log('writing field_link_document', 'success');
-  
+
   $url = trim(gsb_cmis_api_getObjectURL('default', $doc));
   if (!empty($url)) {
     $url = _gsb_feature_case_ct_force_protocol($url);
@@ -175,7 +184,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   }
 
   gsb_cmis_log('writing field_author', 'success');
-  
+
   if (!empty($doc->properties['cm:author']) && trim($doc->properties['cm:author']) != '') {
     $ewrapper->field_author->set($doc->properties['cm:author']);
   } else {
@@ -201,12 +210,12 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     } else {
       $ewrapper->field_link_single->set(NULL);
       $ewrapper->field_has_harvard_link->set("0");
-    }    
+    }
   } else {
     $ewrapper->field_link_single->set(NULL);
     $ewrapper->field_has_harvard_link->set("0");
   }
-  
+
   gsb_cmis_log('writing field_link_center_single', 'success');
 
   $url_casecenter = trim($doc->properties['gsb:cwoECopy']);
@@ -218,11 +227,11 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     } else {
       $ewrapper->field_link_center_single->set(NULL);
       $ewrapper->field_has_case_center->set("0");
-    }      
+    }
   } else {
     $ewrapper->field_link_center_single->set(NULL);
     $ewrapper->field_has_case_center->set("0");
-  }   
+  }
 
   gsb_cmis_log('writing field_citation', 'success');
 
@@ -290,7 +299,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $ewrapper->field_paper_copy->set($doc->properties['gsb:cwoPaperCopy']);
   } else {
     $ewrapper->field_paper_copy->set(NULL);
-  }  
+  }
 
   gsb_cmis_log('writing field_item_id', 'success');
 
@@ -298,7 +307,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $ewrapper->field_item_id->set($doc->properties['gsb:cwoItemId']);
   } else {
     $ewrapper->field_item_id->set(NULL);
-  }    
+  }
 
   gsb_cmis_log('writing field_tag', 'success');
 
@@ -334,7 +343,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     if ($doc->properties['gsb:cwoFreeCase'] == 'true') {
       $ewrapper->field_free_case->set("1");
     }
-  } 
+  }
 
   gsb_cmis_log('saving node', 'success');
 
@@ -350,7 +359,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   // get the new list of authors saved with the node
   $authors = $ewrapper->field_authors->value();
-  
+
   // update the list to remove any field collections that
   // have been deleted and then save the node
   if (!empty($authors)) {
@@ -368,14 +377,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $node->status = 1;
   $node->workbench_moderation['updating_live_revision'] = 1;
 
-  node_save($node);  
+  node_save($node);
 
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 6');
 
 }
 
 /**
- * Add the case tags from the returned Alfresco data 
+ * Add the case tags from the returned Alfresco data
  */
 function _gsb_feature_case_ct_add_tags($tags) {
   $vocab = taxonomy_vocabulary_machine_name_load('tag');
@@ -390,7 +399,7 @@ function _gsb_feature_case_ct_add_tags($tags) {
         if ($item->vocabulary_machine_name == 'tag') {
           $found = TRUE;
           break;
-        }    
+        }
       }
       if (!$found) {
         _gsb_feature_case_ct_add_tag_term($term, $vid);
@@ -400,7 +409,7 @@ function _gsb_feature_case_ct_add_tags($tags) {
 }
 
 /**
- * Add a tag term 
+ * Add a tag term
  */
 function _gsb_feature_case_ct_add_tag_term($term, $vid) {
   $new_term = new stdClass();
@@ -510,7 +519,7 @@ function _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc) {
     // start by putting all these node ids in the add list
     foreach ($result as $record) {
       $add_entity_ids[$record->entity_id] = $record->entity_id;
-    }    
+    }
   }
 
   // get the current list of authors saved with the node
@@ -518,7 +527,7 @@ function _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc) {
 
   // if any of the author ids match one of the sunetid node ids, then
   // we don't need to add it, and can remove it from our add list.
-  // also... 
+  // also...
   // if an author id isn't in the add list, then it needs to be removed
   // so we'll add it to our delete list.
   foreach($authors as $author) {
@@ -553,17 +562,17 @@ function _gsb_feature_case_ct_import_sunet_authors($node,$ewrapper,$doc) {
   // add any new authors that came for the sunetids
   foreach ($add_entity_ids as $entity_id) {
     _gsb_feature_case_ct_add_author($node, $entity_id);
-  }  
+  }
 
   // delete any authors that are no longer sunetids in Alfresco
   foreach($del_field_collection_items as $item) {
     $item->delete();
   }
 
-}  
+}
 
 /**
- * Add an author entity ref (via field_authors field collection) 
+ * Add an author entity ref (via field_authors field collection)
  * to the node's current list
  */
 function _gsb_feature_case_ct_add_author($node, $entity_id) {
@@ -591,7 +600,7 @@ function _gsb_feature_case_ct_add_author($node, $entity_id) {
 }
 
 /**
- * Add an author entity 'other' info (via field_authors field collection) 
+ * Add an author entity 'other' info (via field_authors field collection)
  * to the first and last name given.
  */
 function _gsb_feature_case_ct_add_other_author($node, $first_name, $last_name) {
@@ -632,7 +641,7 @@ function _gsb_feature_case_ct_delete_case($uuid) {
     // a node already exists, so delete it
     $nids = array_keys($entities['node']);
     node_delete(array_shift($nids));
-  } 
+  }
 
 }
 
@@ -669,14 +678,14 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
       );
     }
     // "Paper Copy" = "Yes" AND Free Case checkbox is checked (value true) display statement (1)
-    if (!empty($node->field_paper_copy['und'][0]) && $node->field_paper_copy['und'][0]['value'] == 'Yes' && 
+    if (!empty($node->field_paper_copy['und'][0]) && $node->field_paper_copy['und'][0]['value'] == 'Yes' &&
         !empty($node->field_free_case['und'][0]) && $node->field_free_case['und'][0]['value'] == '1') {
       $node->content['gsb_feature_case_ct_pdf_statement'] = array(
         '#markup' => '<span class="gsb-feature-case-ct-pdf-statement">' . t('PDF available to download at no charge.') . '</span>',
       );
     }
     // "Paper Copy" = "Yes" AND Free Case checkbox is not checked (value false) display statement (2)
-    if (!empty($node->field_paper_copy['und'][0]) && $node->field_paper_copy['und'][0]['value'] == 'Yes' && 
+    if (!empty($node->field_paper_copy['und'][0]) && $node->field_paper_copy['und'][0]['value'] == 'Yes' &&
        (empty($node->field_free_case['und'][0]) || $node->field_free_case['und'][0]['value'] == '0')) {
       $node->content['gsb_feature_case_ct_pdf_statement'] = array(
         '#markup' => '<span class="gsb-feature-case-ct-pdf-statement">' . t('PDF restricted to the Stanford GSB community.') . '</span>',
