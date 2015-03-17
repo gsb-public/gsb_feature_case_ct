@@ -68,6 +68,12 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     return;
   }
 
+  // get the cwoAccess property, assume default of 'Not for distribution'
+  $case_access = 'Not for distribution';
+  if (!empty($doc->properties['gsb:cwoAccess']) && trim($doc->properties['gsb:cwoAccess']) != '') {
+    $case_access = $doc->properties['gsb:cwoAccess'];
+  }
+
   watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 2');
 
   // Attempt to find a node with the document uuid
@@ -80,7 +86,15 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $nids = array_keys($entities['node']);
     $node = node_load(array_shift($nids));
   } else {
-    // a node doesn't exist, so create one
+    // a node doesn't exist
+
+    // check the Case cwoAccess property
+    // we do not import(create) Cases that are marked as 'Not for distribution'
+    if ($case_access == 'Not for distribution') {
+      return;
+    }
+
+    // create a node
     $values = array(
       'type' => 'case',
       'uid' => $user->uid,
@@ -95,6 +109,12 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   // if the node isn't a Case, then bail
   if ($node->type != 'case') {
+    return;
+  }
+
+  if ($case_access == 'Not for distribution') {
+    // delete the node
+    node_delete($node->nid);
     return;
   }
 
