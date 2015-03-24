@@ -723,11 +723,9 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
  */
 function gsb_feature_case_ct_ffc_conditions_info() {
   $conditions = array();
-
   $conditions['hide_any_string'] = array(
     'title' => t('Hide when target field contains any string'),
   );
-
   return $conditions;
 }
 
@@ -736,20 +734,17 @@ function gsb_feature_case_ct_ffc_conditions_info() {
  */
 function ffc_condition_form_hide_any_string($context, $configuration) {
   $form = array();
-
   $form['target'] = array(
     '#type' => 'select',
     '#title' => t('Select target field'),
     '#options' => ffc_get_condition_fields($context),
     '#default_value' => isset($configuration['target']) ? $configuration['target'] : '',
   );
-
   $form['or_strings'] = array(
     '#type' => 'textarea',
     '#title' => 'Or Strings',
     '#default_value' => isset($configuration['or_strings']) ? $configuration['or_strings'] : '',
   );
-
   return $form;
 }
 
@@ -758,7 +753,6 @@ function ffc_condition_form_hide_any_string($context, $configuration) {
  */
 function ffc_condition_execute_hide_any_string(&$build, $source, $configuration, $context) {
   $language = $context['entity']->language;
-  //$hide_any_strings = array('Free', 'Stanford GSB classes only, accessible','Stanford GSB classes only, restricted');
   $hide_any_strings = explode("\n", $configuration['or_strings']);
   if (in_array($context['entity']->{$configuration['target']}[$language][0]['value'], $hide_any_strings)) {
     $build[$source]['#access'] = FALSE;
