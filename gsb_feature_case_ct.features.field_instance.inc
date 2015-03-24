@@ -1191,7 +1191,17 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
-          'conditions' => array(),
+          'conditions' => array(
+            0 => array(
+              'condition' => 'hide_any_string',
+              'configuration' => array(
+                'or_strings' => 'Free
+Stanford GSB classes only, accessible
+Stanford GSB classes only, restricted',
+                'target' => 'field_case_access',
+              ),
+            ),
+          ),
         ),
         'type' => 'link_default',
         'weight' => 12,
@@ -1372,7 +1382,17 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'link',
         'settings' => array(
-          'conditions' => array(),
+          'conditions' => array(
+            0 => array(
+              'condition' => 'hide_any_string',
+              'configuration' => array(
+                'or_strings' => 'Free
+Stanford GSB classes only, accessible
+Stanford GSB classes only, restricted',
+                'target' => 'field_case_access',
+              ),
+            ),
+          ),
         ),
         'type' => 'link_default',
         'weight' => 11,
