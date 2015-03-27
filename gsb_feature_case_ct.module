@@ -109,7 +109,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
   if (!empty($doc->properties['cm:title']) && trim($doc->properties['cm:title']) != '') {
     $ewrapper->title->set($doc->properties['cm:title']);
-    gsb_cmis_log('title 0 = ' . $doc->properties['cmis:title'], 'success');
+    gsb_cmis_log('title 0 = ' . $doc->properties['cm:title'], 'success');
   } else {
     // if title is empty, then try to use document name
     if (!empty($doc->properties['cmis:contentStreamFileName']) && trim($doc->properties['cmis:contentStreamFileName']) != '') {
@@ -337,7 +337,7 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $ewrapper->field_free_case->set("0");
   if (!empty($doc->properties['gsb:cwoFreeCase']) && trim($doc->properties['gsb:cwoFreeCase']) != '') {
     gsb_cmis_log('free case = '.$doc->properties['gsb:cwoFreeCase'], 'success');
-    if ($doc->properties['gsb:cwoFreeCase'] == 'true' || $case_access != 'Free') {
+    if ($doc->properties['gsb:cwoFreeCase'] == 'true' || $case_access == 'Free') {
       $ewrapper->field_free_case->set("1");
     }
   }
