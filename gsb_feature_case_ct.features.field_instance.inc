@@ -1615,6 +1615,72 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
+  // Exported field_instance: 'node-case-field_case_access'
+  $field_instances['node-case-field_case_access'] = array(
+    'bundle' => 'case',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
+      'idea_story_related' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'teaser_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 33,
+      ),
+      'views_content_pane' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_case_access',
+    'label' => 'Case Access',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+      ),
+      'type' => 'options_select',
+      'weight' => 19,
+    ),
+    'workbench_access_field' => 0,
+  );
+
   // Exported field_instance: 'node-case-field_permissions_statement'
   $field_instances['node-case-field_permissions_statement'] = array(
     'bundle' => 'case',
@@ -1822,6 +1888,7 @@ Stanford GSB classes only, restricted',
         'field_link_single' => 0,
         'field_page_count' => 0,
         'field_paper_copy' => 0,
+        'field_case_access' => 0,
         'field_permissions_statement' => 0,
         'field_product_type' => 0,
         'field_tag' => 'field_tag',
@@ -2101,6 +2168,7 @@ Stanford GSB classes only, restricted',
   t('Length');
   t('Link at Harvard');
   t('Paper Copy');
+  t('Case Access');
   t('Permission Statement');
   t('Product Type');
   t('Publication Year');
