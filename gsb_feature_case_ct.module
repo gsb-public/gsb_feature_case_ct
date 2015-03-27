@@ -33,31 +33,12 @@ function gsb_feature_case_ct_gsb_cmis_content_type_import_info() {
  */
 function gsb_feature_case_ct_cmis_import($doc, $uuid) {
 
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 0');
-
   global $user;
-
-  // Check if the Product Type has been set. If not, bail.
-  if (empty($doc->properties['gsb:cwoProductType']) || trim($doc->properties['gsb:cwoProductType']) == '') {
-    return;
-  }
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1a');
 
   // Check if the Paper has been set. If not, bail.
   if (empty($doc->properties['gsb:cwoPaperCopy']) || trim($doc->properties['gsb:cwoPaperCopy']) == '') {
     return;
   }
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1b');
-
-  // Check if the Paper has been set 'No' then delete and bail.
-  if ($doc->properties['gsb:cwoPaperCopy'] == 'No') {
-    _gsb_feature_case_ct_delete_case($uuid);
-    return;
-  }
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 1c');
 
   // Valid Product Types for 'Case' Content type are either:
   //   Case
@@ -73,8 +54,6 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   if (!empty($doc->properties['gsb:cwoAccess']) && trim($doc->properties['gsb:cwoAccess']) != '') {
     $case_access = $doc->properties['gsb:cwoAccess'];
   }
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 2');
 
   // Attempt to find a node with the document uuid
   $query = new EntityFieldQuery();
@@ -105,8 +84,6 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     $node = entity_create('node', $values);
   }
 
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 3');
-
   // if the node isn't a Case, then bail
   if ($node->type != 'case') {
     return;
@@ -119,8 +96,6 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   }
 
   $language = $node->language;
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 4');
 
   gsb_cmis_log('uuid = '.$uuid, 'success');
 
@@ -360,14 +335,12 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $ewrapper->field_free_case->set("0");
   if (!empty($doc->properties['gsb:cwoFreeCase']) && trim($doc->properties['gsb:cwoFreeCase']) != '') {
     gsb_cmis_log('free case = '.$doc->properties['gsb:cwoFreeCase'], 'success');
-    if ($doc->properties['gsb:cwoFreeCase'] == 'true') {
+    if ($doc->properties['gsb:cwoFreeCase'] == 'true' || $case_access != 'Not for distribution') {
       $ewrapper->field_free_case->set("1");
     }
   }
 
   gsb_cmis_log('saving node', 'success');
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 5');
 
   $ewrapper->save();
 
@@ -398,8 +371,6 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   $node->workbench_moderation['updating_live_revision'] = 1;
 
   node_save($node);
-
-  watchdog('gsb_feature_case_ct', 'at gsb_feature_case_ct_cmis_import 6');
 
 }
 
