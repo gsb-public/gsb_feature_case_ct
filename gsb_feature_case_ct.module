@@ -335,11 +335,8 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   gsb_cmis_log('writing field_free_case', 'success');
 
   $ewrapper->field_free_case->set("0");
-  if (!empty($doc->properties['gsb:cwoFreeCase']) && trim($doc->properties['gsb:cwoFreeCase']) != '') {
-    gsb_cmis_log('free case = '.$doc->properties['gsb:cwoFreeCase'], 'success');
-    if ($doc->properties['gsb:cwoFreeCase'] == 'true' || $case_access == 'Free') {
-      $ewrapper->field_free_case->set("1");
-    }
+  if ($case_access == 'Free') {
+    $ewrapper->field_free_case->set("1");
   }
 
   gsb_cmis_log('saving node nid = ' . $node->nid, 'success');
