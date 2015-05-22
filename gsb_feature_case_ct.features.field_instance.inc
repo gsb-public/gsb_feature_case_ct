@@ -509,9 +509,11 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'more_text' => '',
           'summary_handler' => 'full',
           'trim_length' => 35,
+          'trim_link' => FALSE,
           'trim_options' => array(
             'text' => 0,
           ),
+          'trim_preserve_tags' => '',
           'trim_suffix' => '...',
           'trim_type' => 'words',
         ),
@@ -527,9 +529,11 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'more_text' => '',
           'summary_handler' => 'full',
           'trim_length' => 35,
+          'trim_link' => FALSE,
           'trim_options' => array(
             'text' => 0,
           ),
+          'trim_preserve_tags' => '',
           'trim_suffix' => '...',
           'trim_type' => 'words',
         ),
