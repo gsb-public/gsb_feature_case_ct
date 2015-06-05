@@ -137,7 +137,7 @@ function gsb_feature_case_ct_strongarm() {
       'display' => array(
         'gsb_feature_base_fields_faculty_authors' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '1',
             'visible' => TRUE,
           ),
           'views_content_pane' => array(
