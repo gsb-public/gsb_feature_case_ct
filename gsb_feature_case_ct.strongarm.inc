@@ -115,6 +115,12 @@ function gsb_feature_case_ct_strongarm() {
       'news_listing' => array(
         'custom_settings' => FALSE,
       ),
+      'compact' => array(
+        'custom_settings' => TRUE,
+      ),
+      'expanded' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -160,6 +166,14 @@ function gsb_feature_case_ct_strongarm() {
             'weight' => '0',
             'visible' => FALSE,
           ),
+          'compact' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
+          'expanded' => array(
+            'weight' => '1',
+            'visible' => FALSE,
+          ),
         ),
         'gsb_cmis_download_button' => array(
           'default' => array(
@@ -182,6 +196,14 @@ function gsb_feature_case_ct_strongarm() {
             'weight' => '0',
             'visible' => FALSE,
           ),
+          'compact' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
+          'expanded' => array(
+            'weight' => '12',
+            'visible' => FALSE,
+          ),
         ),
         'gsb_feature_case_ct_pdf_statement' => array(
           'default' => array(
@@ -202,6 +224,14 @@ function gsb_feature_case_ct_strongarm() {
           ),
           'teaser' => array(
             'weight' => '0',
+            'visible' => FALSE,
+          ),
+          'compact' => array(
+            'weight' => '11',
+            'visible' => FALSE,
+          ),
+          'expanded' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),
