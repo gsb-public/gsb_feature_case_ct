@@ -12,11 +12,103 @@ function gsb_feature_case_ct_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|case|compact';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'case';
+  $ds_fieldsetting->view_mode = 'compact';
+  $ds_fieldsetting->settings = array(
+    'case_product_type' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'field_author' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_item_id' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'prefix' => '<span class="pipe">|</span>',
+          'ow' => TRUE,
+          'ow-el' => 'span',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_year' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|case|compact'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|case|default';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'case';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
+    'case_product_type' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'conditions' => array(),
+      ),
+    ),
     'related_title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -29,9 +121,24 @@ function gsb_feature_case_ct_ds_field_settings_info() {
       ),
     ),
     'title' => array(
-      'weight' => '0',
+      'weight' => '2',
       'label' => 'hidden',
       'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'conditions' => array(),
+      ),
     ),
     'field_author' => array(
       'formatter_settings' => array(
@@ -61,6 +168,19 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_citation' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
     'field_description' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -78,7 +198,7 @@ function gsb_feature_case_ct_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'prefix' => '| Case No. ',
+          'prefix' => '<span class="pipe">|</span><span class="case-number">Case No.</span>',
           'ow' => TRUE,
           'ow-el' => 'span',
           'ow-cl' => '',
@@ -187,6 +307,100 @@ function gsb_feature_case_ct_ds_field_settings_info() {
     ),
   );
   $export['node|case|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|case|expanded';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'case';
+  $ds_fieldsetting->view_mode = 'expanded';
+  $ds_fieldsetting->settings = array(
+    'case_product_type' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'title' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '1',
+        'wrapper' => 'h2',
+        'class' => '',
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+        'conditions' => array(),
+      ),
+    ),
+    'field_author' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_description' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_item_id' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'prefix' => '<span class="pipe">|</span>',
+          'ow' => TRUE,
+          'ow-el' => 'span',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_year' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|case|expanded'] = $ds_fieldsetting;
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
@@ -470,12 +684,11 @@ function gsb_feature_case_ct_ds_custom_fields_info() {
   $ds_field->entities = array(
     'node' => 'node',
   );
-  $ds_field->ui_limit = 'case|teaser_listing
-case|views_content_pane';
+  $ds_field->ui_limit = 'case|*';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<div class="case-product-icon [node:field-product-type]"></div>',
-      'format' => 'full_html',
+      'value' => '<span class="case-product-icon [node:field-product-type]"></span>',
+      'format' => 'gsb_html_text',
     ),
     'use_token' => 1,
   );
@@ -498,16 +711,33 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
   $ds_layout->view_mode = 'compact';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
-    'regions' => array(),
-    'fields' => array(),
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'case_product_type',
+        1 => 'group_wrapper_title',
+        2 => 'title',
+        3 => 'field_item_id',
+        4 => 'field_author',
+        5 => 'field_year',
+      ),
+    ),
+    'fields' => array(
+      'case_product_type' => 'ds_content',
+      'group_wrapper_title' => 'ds_content',
+      'title' => 'ds_content',
+      'field_item_id' => 'ds_content',
+      'field_author' => 'ds_content',
+      'field_year' => 'ds_content',
+    ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|case|compact'] = $ds_layout;
 
@@ -523,47 +753,51 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'right' => array(
         0 => 'related_title',
         2 => 'gsb_feature_base_fields_faculty_authors',
-        19 => 'group_wrapper_related',
+        21 => 'group_wrapper_related',
       ),
       'left' => array(
-        1 => 'title',
-        3 => 'field_author',
-        4 => 'field_year',
-        5 => 'field_item_id',
-        6 => 'field_page_count',
-        7 => 'group_wrapper_taxonomy',
+        1 => 'group_wrapper_title',
+        3 => 'case_product_type',
+        4 => 'title',
+        5 => 'field_author',
+        6 => 'field_year',
+        7 => 'field_item_id',
         8 => 'field_academic_area_unlimited',
-        9 => 'field_description',
-        10 => 'field_business_insight_topic',
-        11 => 'field_learning_objective',
-        12 => 'field_tag',
-        13 => 'field_citation',
-        14 => 'group_wrapper_paper_copy',
+        9 => 'field_page_count',
+        10 => 'group_wrapper_taxonomy',
+        11 => 'field_business_insight_topic',
+        12 => 'field_description',
+        13 => 'field_learning_objective',
+        14 => 'field_tag',
         15 => 'field_link_single',
-        16 => 'gsb_feature_case_ct_pdf_statement',
+        16 => 'field_citation',
         17 => 'field_link_center_single',
-        18 => 'gsb_cmis_download_button',
+        18 => 'group_wrapper_paper_copy',
+        19 => 'gsb_feature_case_ct_pdf_statement',
+        20 => 'gsb_cmis_download_button',
       ),
     ),
     'fields' => array(
       'related_title' => 'right',
-      'title' => 'left',
+      'group_wrapper_title' => 'left',
       'gsb_feature_base_fields_faculty_authors' => 'right',
+      'case_product_type' => 'left',
+      'title' => 'left',
       'field_author' => 'left',
       'field_year' => 'left',
       'field_item_id' => 'left',
+      'field_academic_area_unlimited' => 'left',
       'field_page_count' => 'left',
       'group_wrapper_taxonomy' => 'left',
-      'field_academic_area_unlimited' => 'left',
-      'field_description' => 'left',
       'field_business_insight_topic' => 'left',
+      'field_description' => 'left',
       'field_learning_objective' => 'left',
       'field_tag' => 'left',
-      'field_citation' => 'left',
-      'group_wrapper_paper_copy' => 'left',
       'field_link_single' => 'left',
-      'gsb_feature_case_ct_pdf_statement' => 'left',
+      'field_citation' => 'left',
       'field_link_center_single' => 'left',
+      'group_wrapper_paper_copy' => 'left',
+      'gsb_feature_case_ct_pdf_statement' => 'left',
       'gsb_cmis_download_button' => 'left',
       'group_wrapper_related' => 'right',
     ),
@@ -589,16 +823,35 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
   $ds_layout->view_mode = 'expanded';
   $ds_layout->layout = 'ds_1col';
   $ds_layout->settings = array(
-    'regions' => array(),
-    'fields' => array(),
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_wrapper_title',
+        1 => 'case_product_type',
+        2 => 'title',
+        3 => 'field_item_id',
+        4 => 'field_author',
+        5 => 'field_year',
+        6 => 'field_description',
+      ),
+    ),
+    'fields' => array(
+      'group_wrapper_title' => 'ds_content',
+      'case_product_type' => 'ds_content',
+      'title' => 'ds_content',
+      'field_item_id' => 'ds_content',
+      'field_author' => 'ds_content',
+      'field_year' => 'ds_content',
+      'field_description' => 'ds_content',
+    ),
     'classes' => array(),
-    'wrappers' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
-    'layout_attributes_merge' => TRUE,
-    'layout_link_attribute' => FALSE,
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
   );
   $export['node|case|expanded'] = $ds_layout;
 

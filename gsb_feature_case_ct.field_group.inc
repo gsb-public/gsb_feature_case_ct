@@ -21,7 +21,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Available for purchase',
-    'weight' => '10',
+    'weight' => '12',
     'children' => array(
       0 => 'field_link_single',
       1 => 'field_link_center_single',
@@ -53,7 +53,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related',
-    'weight' => '13',
+    'weight' => '15',
     'children' => array(
       0 => 'gsb_feature_base_fields_faculty_authors',
       1 => 'related_title',
@@ -80,7 +80,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => '5',
+    'weight' => '7',
     'children' => array(
       0 => 'field_business_insight_topic',
       1 => 'field_academic_area_unlimited',
@@ -96,6 +96,104 @@ function gsb_feature_case_ct_field_group_info() {
     ),
   );
   $export['group_wrapper_taxonomy|node|case|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_title|node|case|compact';
+  $field_group->group_name = 'group_wrapper_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'case';
+  $field_group->mode = 'compact';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_item_id',
+      1 => 'case_product_type',
+      2 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_title|node|case|compact'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_title|node|case|default';
+  $field_group->group_name = 'group_wrapper_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'case';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'case_product_type',
+      1 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_title|node|case|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper_title|node|case|expanded';
+  $field_group->group_name = 'group_wrapper_title';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'case';
+  $field_group->mode = 'expanded';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Title wrapper',
+    'weight' => '0',
+    'children' => array(
+      0 => 'field_item_id',
+      1 => 'case_product_type',
+      2 => 'title',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Title wrapper',
+      'instance_settings' => array(
+        'classes' => '',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_wrapper_title|node|case|expanded'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
