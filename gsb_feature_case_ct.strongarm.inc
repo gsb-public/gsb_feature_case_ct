@@ -167,17 +167,17 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'compact' => array(
-            'weight' => '1',
+            'weight' => '13',
             'visible' => FALSE,
           ),
           'expanded' => array(
-            'weight' => '1',
+            'weight' => '13',
             'visible' => FALSE,
           ),
         ),
         'gsb_cmis_download_button' => array(
           'default' => array(
-            'weight' => '12',
+            'weight' => '14',
             'visible' => TRUE,
           ),
           'teaser_listing' => array(
@@ -197,17 +197,17 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'compact' => array(
-            'weight' => '12',
+            'weight' => '24',
             'visible' => FALSE,
           ),
           'expanded' => array(
-            'weight' => '12',
+            'weight' => '22',
             'visible' => FALSE,
           ),
         ),
         'gsb_feature_case_ct_pdf_statement' => array(
           'default' => array(
-            'weight' => '11',
+            'weight' => '13',
             'visible' => TRUE,
           ),
           'teaser_listing' => array(
@@ -227,11 +227,11 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'compact' => array(
-            'weight' => '11',
+            'weight' => '21',
             'visible' => FALSE,
           ),
           'expanded' => array(
-            'weight' => '11',
+            'weight' => '20',
             'visible' => FALSE,
           ),
         ),
