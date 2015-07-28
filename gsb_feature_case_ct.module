@@ -155,8 +155,10 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   gsb_cmis_log('writing field_description', 'success');
 
   if (!empty($doc->properties['gsb:cwoAbstract']) && trim($doc->properties['gsb:cwoAbstract']) != '') {
+    $description = $doc->properties['gsb:cwoAbstract'];
+    $description = str_replace('\n','',$description);
     $ewrapper->field_description = array(
-      'value' => $doc->properties['gsb:cwoAbstract'],
+      'value' => $description,
       'format' => 'gsb_wysiwyg_text',
     );
   } else {
