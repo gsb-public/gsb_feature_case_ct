@@ -243,7 +243,9 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
   gsb_cmis_log('writing field_learning_objective', 'success');
 
   if (!empty($doc->properties['gsb:cwoLearningObjective']) && trim($doc->properties['gsb:cwoLearningObjective']) != '') {
-    $ewrapper->field_learning_objective->set($doc->properties['gsb:cwoLearningObjective']);
+    $learning = $doc->properties['gsb:cwoLearningObjective'];
+    $learning = str_replace('\n','',$learning);
+    $ewrapper->field_learning_objective->set($learning);
   } else {
     $ewrapper->field_learning_objective->set(NULL);
   }
