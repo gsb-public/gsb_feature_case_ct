@@ -125,16 +125,16 @@ function gsb_feature_case_ct_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '28',
+          'weight' => '30',
         ),
         'title' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'path' => array(
-          'weight' => '27',
+          'weight' => '29',
         ),
         'redirect' => array(
-          'weight' => '26',
+          'weight' => '28',
         ),
         'workbench_access' => array(
           'weight' => '17',

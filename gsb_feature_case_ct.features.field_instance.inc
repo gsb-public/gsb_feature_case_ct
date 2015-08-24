@@ -97,7 +97,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'taxonomy_hs',
-      'weight' => 11,
+      'weight' => 12,
     ),
     'workbench_access_field' => 0,
   );
@@ -206,7 +206,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 5,
     ),
     'workbench_access_field' => 0,
   );
@@ -284,7 +284,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'field_collection_embed',
-      'weight' => 5,
+      'weight' => 6,
     ),
     'workbench_access_field' => 0,
   );
@@ -376,7 +376,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'taxonomy_hs',
-      'weight' => 12,
+      'weight' => 13,
     ),
     'workbench_access_field' => 0,
   );
@@ -454,7 +454,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 20,
+      'weight' => 22,
     ),
     'workbench_access_field' => 0,
   );
@@ -536,7 +536,89 @@ function gsb_feature_case_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 13,
+      'weight' => 14,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-case-field_circle_topics'
+  $field_instances['node-case-field_circle_topics'] = array(
+    'bundle' => 'case',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 36,
+      ),
+      'expanded' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'idea_story_related' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'views_content_pane' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_circle_topics',
+    'label' => 'Circle Topics',
+    'required' => 0,
+    'settings' => array(
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'use_hierarchical_select_lite' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 15,
     ),
     'workbench_access_field' => 0,
   );
@@ -625,7 +707,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textarea',
-      'weight' => 16,
+      'weight' => 18,
     ),
     'workbench_access_field' => 0,
   );
@@ -789,7 +871,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'workbench_access_field' => 0,
   );
@@ -874,7 +956,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 20,
     ),
     'workbench_access_field' => 0,
   );
@@ -959,7 +1041,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 17,
+      'weight' => 19,
     ),
     'workbench_access_field' => 0,
   );
@@ -1044,7 +1126,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_onoff',
-      'weight' => 23,
+      'weight' => 25,
     ),
     'workbench_access_field' => 0,
   );
@@ -1129,7 +1211,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_onoff',
-      'weight' => 25,
+      'weight' => 27,
     ),
     'workbench_access_field' => 0,
   );
@@ -1214,7 +1296,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_onoff',
-      'weight' => 24,
+      'weight' => 26,
     ),
     'workbench_access_field' => 0,
   );
@@ -1311,7 +1393,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 7,
+      'weight' => 8,
     ),
     'workbench_access_field' => 0,
   );
@@ -1401,7 +1483,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
     'workbench_access_field' => 0,
   );
@@ -1515,7 +1597,7 @@ Stanford GSB classes only, restricted',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 15,
+      'weight' => 17,
     ),
     'workbench_access_field' => 0,
   );
@@ -1616,7 +1698,7 @@ Stanford GSB classes only, restricted',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 19,
+      'weight' => 21,
     ),
     'workbench_access_field' => 0,
   );
@@ -1730,7 +1812,7 @@ Stanford GSB classes only, restricted',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 14,
+      'weight' => 16,
     ),
     'workbench_access_field' => 0,
   );
@@ -1818,7 +1900,7 @@ Stanford GSB classes only, restricted',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
     'workbench_access_field' => 0,
   );
@@ -1896,7 +1978,7 @@ Stanford GSB classes only, restricted',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 21,
+      'weight' => 23,
     ),
     'workbench_access_field' => 0,
   );
@@ -1981,7 +2063,7 @@ Stanford GSB classes only, restricted',
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
     'workbench_access_field' => 0,
   );
@@ -2059,7 +2141,96 @@ Stanford GSB classes only, restricted',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 22,
+      'weight' => 24,
+    ),
+    'workbench_access_field' => 0,
+  );
+
+  // Exported field_instance: 'node-case-field_publication_type'
+  $field_instances['node-case-field_publication_type'] = array(
+    'bundle' => 'case',
+    'custom_add_another' => '',
+    'custom_remove' => '',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'compact' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'list_default',
+        'weight' => 35,
+      ),
+      'expanded' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'idea_story_related' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'insight_featured_card' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser_listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'views_content_pane' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_publication_type',
+    'label' => 'Publication Type',
+    'required' => 0,
+    'settings' => array(
+      'checkall' => array(
+        'checkall' => 0,
+        'checkall-check-all' => 1,
+        'checkall-toggle' => 1,
+        'checkall-uncheck-all' => 1,
+      ),
+      'custom_add_another' => '',
+      'custom_remove' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'checkall' => FALSE,
+      ),
+      'type' => 'options_buttons',
+      'weight' => 1,
     ),
     'workbench_access_field' => 0,
   );
@@ -2159,7 +2330,7 @@ Stanford GSB classes only, restricted',
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'concat_field_default',
-      'weight' => 29,
+      'weight' => 31,
     ),
     'workbench_access_field' => 0,
   );
@@ -2321,7 +2492,7 @@ Stanford GSB classes only, restricted',
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 6,
+      'weight' => 7,
     ),
     'workbench_access_field' => 0,
   );
@@ -2452,7 +2623,7 @@ Stanford GSB classes only, restricted',
         'year_range' => '-3:+3',
       ),
       'type' => 'date_text',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -2465,6 +2636,7 @@ Stanford GSB classes only, restricted',
   t('Case Access');
   t('Case Center');
   t('Circle (Centers and Research Programs)');
+  t('Circle Topics');
   t('Citation');
   t('Description');
   t('Document Link');
@@ -2481,6 +2653,7 @@ Stanford GSB classes only, restricted',
   t('Paper Copy');
   t('Permission Statement');
   t('Product Type');
+  t('Publication Type');
   t('Publication Year');
   t('Search field');
   t('Submit');
