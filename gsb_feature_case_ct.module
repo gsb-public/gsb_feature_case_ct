@@ -10,10 +10,15 @@ include_once 'gsb_feature_case_ct.features.inc';
  * Implements hook_form_FORM_ID_alter() for case node edit form.
  */
 function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
+  $language = $form['language']['#value'];
+
   $form['field_document_uuid']['#disabled'] = TRUE;
   $form['field_link_document']['#disabled'] = TRUE;
   $form['field_document_name']['#disabled'] = TRUE;
   $form['field_case_access']['#disabled'] = TRUE;
+
+  $form['field_publication_type'][$language]['#default_value'] = 'case';
+  $form['field_publication_type']['#access'] = FALSE;
 }
 
 /**
