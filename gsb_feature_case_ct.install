@@ -254,3 +254,31 @@ function gsb_feature_case_ct_update_7000() {
   }
 
 }
+
+/**
+ * Reimport the following cases.
+ */
+function gsb_feature_case_ct_update_7001() {
+
+  $t = strtotime("April 2015");
+
+  $table_name = 'node';
+  $query = db_select($table_name, 'node')
+    ->fields('node', array('nid', 'type', 'title', 'changed'))
+    ->fields('doc', array('field_document_uuid_value'))
+    ->condition('node.type', 'case', '=')
+    ->condition('node.changed', $t, '>');
+  $query->join('field_data_field_document_uuid', 'doc', 'node.nid = doc.entity_id');
+  $result = $query->execute();
+  $records = array();
+
+  $uuids = array();
+  foreach ($result as $record) {
+    $uuids[] = $record->field_document_uuid_value;
+  }
+
+  foreach($uuids as $uuid) {
+    $doc = gsb_cmis_api_getDocumentObject('default', $uuid);
+    gsb_feature_case_ct_cmis_import($doc, $uuid);
+  }
+}
