@@ -1315,7 +1315,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
           'conditions' => array(),
         ),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'default' => array(
         'label' => 'hidden',
@@ -2156,9 +2156,12 @@ Stanford GSB classes only, restricted',
     'description' => '',
     'display' => array(
       'compact' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'list_default',
         'weight' => 0,
       ),
       'default' => array(
@@ -2171,9 +2174,12 @@ Stanford GSB classes only, restricted',
         'weight' => 35,
       ),
       'expanded' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(
+          'conditions' => array(),
+        ),
+        'type' => 'list_default',
         'weight' => 0,
       ),
       'idea_story_related' => array(

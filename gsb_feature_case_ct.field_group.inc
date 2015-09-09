@@ -111,8 +111,9 @@ function gsb_feature_case_ct_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_item_id',
-      1 => 'case_product_type',
-      2 => 'title',
+      1 => 'field_publication_type',
+      2 => 'case_product_type',
+      3 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -176,8 +177,9 @@ function gsb_feature_case_ct_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_item_id',
-      1 => 'case_product_type',
-      2 => 'title',
+      1 => 'field_publication_type',
+      2 => 'case_product_type',
+      3 => 'title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
