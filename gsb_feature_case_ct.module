@@ -679,7 +679,7 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     if (in_array($case_access, array('Instructors only') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
         t('This material is available to instructors only. Please direct further inquiries to the ') .
-        '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' .
+        '<a href="mailto:businesscases@stanford.edu" target="_blank">' .
         t('Case Writing Office') .
         '</a>.' .
         '</span>';
@@ -687,7 +687,7 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     if (in_array($case_access, array('Stanford GSB classes only, accessible') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
         t('This material is available to current Stanford GSB students, faculty and staff. Please direct further inquiries to the ') .
-        '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' .
+        '<a href="mailto:businesscases@stanford.edu" target="_blank">' .
         t('Case Writing Office') .
         '</a>.' .
         '</span>';
@@ -695,7 +695,7 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     if (in_array($case_access, array('Stanford GSB classes only, restricted') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
         t('This material is designated for use in specific Stanford GSB classes only. Please direct further inquiries to the ') .
-        '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' .
+        '<a href="mailto:businesscases@stanford.edu" target="_blank">' .
         t('Case Writing Office') .
         '</a>.' .
         '</span>';
@@ -703,7 +703,7 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     if (in_array($case_access, array('Educational use only') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
         t('This material is available to current Stanford GSB students, faculty and staff. Please direct further inquiries to the ') .
-        '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' .
+        '<a href="mailto:businesscases@stanford.edu" target="_blank">' .
         t('Case Writing Office') .
         '</a>.' .
         '</span>';
@@ -711,7 +711,7 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     if (in_array($case_access, array('Education and Corporate use') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
         t('This material is available to current Stanford GSB students, faculty and staff as well as Stanford University Alumni. Please direct further inquiries to the ') .
-        '<a href="mailto:cwo@gsb.stanford.edu" target="_blank">' .
+        '<a href="mailto:businesscases@stanford.edu" target="_blank">' .
         t('Case Writing Office') .
         '</a>.' .
         '</span>';
