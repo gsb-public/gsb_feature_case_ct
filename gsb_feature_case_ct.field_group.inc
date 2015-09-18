@@ -36,6 +36,7 @@ function gsb_feature_case_ct_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_case_full_group_wrapper_paper_copy',
       ),
       'formatter' => 'open',
     ),
@@ -60,11 +61,12 @@ function gsb_feature_case_ct_field_group_info() {
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Related',
       'instance_settings' => array(
+        'classes' => 'field-group-fieldset group-wrapper-related',
         'description' => '',
-        'classes' => '',
       ),
+      'formatter' => 'collapsible',
     ),
   );
   $export['group_wrapper_related|node|case|default'] = $field_group;
@@ -87,12 +89,12 @@ function gsb_feature_case_ct_field_group_info() {
     ),
     'format_type' => 'gsb_field_formatter_group_comma_separator',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Tagging',
       'instance_settings' => array(
-        'show_label' => 1,
-        'label_element' => 'h3',
+        'item_count' => '0',
         'classes' => '',
       ),
+      'formatter' => 'open',
     ),
   );
   $export['group_wrapper_taxonomy|node|case|default'] = $field_group;
@@ -125,6 +127,7 @@ function gsb_feature_case_ct_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_case_compact_group_wrapper_title',
       ),
       'formatter' => 'open',
     ),
@@ -157,6 +160,7 @@ function gsb_feature_case_ct_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_case_full_group_wrapper_title',
       ),
       'formatter' => 'open',
     ),
@@ -191,6 +195,7 @@ function gsb_feature_case_ct_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_case_expanded_group_wrapper_title',
       ),
       'formatter' => 'open',
     ),
@@ -223,6 +228,7 @@ function gsb_feature_case_ct_field_group_info() {
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
+        'id' => 'node_case_views_content_pane_group_wrapper_title',
       ),
       'formatter' => 'open',
     ),

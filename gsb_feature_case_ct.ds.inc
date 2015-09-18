@@ -780,14 +780,9 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'right' => array(
-        0 => 'related_title',
-        2 => 'gsb_feature_base_fields_faculty_authors',
-        21 => 'group_wrapper_related',
-      ),
       'left' => array(
-        1 => 'group_wrapper_title',
-        3 => 'case_product_type',
+        0 => 'group_wrapper_title',
+        2 => 'case_product_type',
         4 => 'title',
         5 => 'field_author',
         6 => 'field_year',
@@ -801,17 +796,22 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
         14 => 'field_tag',
         15 => 'field_link_single',
         16 => 'field_citation',
-        17 => 'field_link_center_single',
-        18 => 'group_wrapper_paper_copy',
+        17 => 'group_wrapper_paper_copy',
+        18 => 'field_link_center_single',
         19 => 'gsb_feature_case_ct_pdf_statement',
         20 => 'gsb_cmis_download_button',
       ),
+      'right' => array(
+        1 => 'related_title',
+        3 => 'gsb_feature_base_fields_faculty_authors',
+        21 => 'group_wrapper_related',
+      ),
     ),
     'fields' => array(
-      'related_title' => 'right',
       'group_wrapper_title' => 'left',
-      'gsb_feature_base_fields_faculty_authors' => 'right',
+      'related_title' => 'right',
       'case_product_type' => 'left',
+      'gsb_feature_base_fields_faculty_authors' => 'right',
       'title' => 'left',
       'field_author' => 'left',
       'field_year' => 'left',
@@ -825,8 +825,8 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'field_tag' => 'left',
       'field_link_single' => 'left',
       'field_citation' => 'left',
-      'field_link_center_single' => 'left',
       'group_wrapper_paper_copy' => 'left',
+      'field_link_center_single' => 'left',
       'gsb_feature_case_ct_pdf_statement' => 'left',
       'gsb_cmis_download_button' => 'left',
       'group_wrapper_related' => 'right',

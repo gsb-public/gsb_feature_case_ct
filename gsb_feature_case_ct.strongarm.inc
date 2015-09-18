@@ -121,6 +121,12 @@ function gsb_feature_case_ct_strongarm() {
       'expanded' => array(
         'custom_settings' => TRUE,
       ),
+      'event_contacts' => array(
+        'custom_settings' => FALSE,
+      ),
+      'main_list' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
