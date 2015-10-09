@@ -121,26 +121,20 @@ function gsb_feature_case_ct_strongarm() {
       'expanded' => array(
         'custom_settings' => TRUE,
       ),
-      'event_contacts' => array(
-        'custom_settings' => FALSE,
-      ),
-      'main_list' => array(
-        'custom_settings' => FALSE,
-      ),
     ),
     'extra_fields' => array(
       'form' => array(
         'metatags' => array(
-          'weight' => '30',
+          'weight' => '31',
         ),
         'title' => array(
           'weight' => '2',
         ),
         'path' => array(
-          'weight' => '29',
+          'weight' => '30',
         ),
         'redirect' => array(
-          'weight' => '28',
+          'weight' => '29',
         ),
         'workbench_access' => array(
           'weight' => '17',
