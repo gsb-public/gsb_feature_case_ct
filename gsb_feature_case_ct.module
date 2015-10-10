@@ -141,11 +141,14 @@ function gsb_feature_case_ct_cmis_import($doc, $uuid) {
     if (is_numeric($year)) {
       $date = new DateTime($year."-01-01");
       $ewrapper->field_year->set($date->getTimestamp());
+      $ewrapper->field_year_of_publication->set($date->getTimestamp());
     } else {
       $ewrapper->field_year = NULL;
+      $ewrapper->field_year_of_publication = NULL;
     }
   } else {
     $ewrapper->field_year = NULL;
+    $ewrapper->field_year_of_publication = NULL;
   }
 
   gsb_cmis_log('writing field_document_name', 'success');
