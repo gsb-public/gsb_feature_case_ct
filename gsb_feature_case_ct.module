@@ -29,14 +29,18 @@ function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
  * Implements hook_node_insert().
  */
 function gsb_feature_case_ct_node_insert($node) {
-  $node->field_publication_type[$node->language][0]['value'] = 'case';
+  if ($node->type == 'case') {
+    $node->field_publication_type[$node->language][0]['value'] = 'case';
+  }
 }
 
 /**
  * Implements hook_node_update().
  */
 function gsb_feature_case_ct_node_update($node) {
-  $node->field_publication_type[$node->language][0]['value'] = 'case';
+  if ($node->type == 'case') {
+    $node->field_publication_type[$node->language][0]['value'] = 'case';
+  }
 }
 
 /**
