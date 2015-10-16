@@ -2699,7 +2699,7 @@ Stanford GSB classes only, restricted',
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_year_of_publication',
-    'label' => 'Publication Year2',
+    'label' => 'Publication Year',
     'required' => 0,
     'settings' => array(
       'custom_add_another' => '',
@@ -2758,7 +2758,6 @@ Stanford GSB classes only, restricted',
   t('Product Type');
   t('Publication Type');
   t('Publication Year');
-  t('Publication Year2');
   t('Search field');
   t('Submit');
 
