@@ -18,6 +18,9 @@ function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
   $form['field_document_name']['#disabled'] = TRUE;
   $form['field_case_access']['#disabled'] = TRUE;
 
+  $form['field_year']['#access'] = FALSE;
+
+  $form['field_publication_type'][$language]['#default_value'] = 'case';
   unset($form['field_publication_type'][$language]['#options']['_none']);
   $form['field_publication_type']['#access'] = FALSE;
   if ($user->uid == 1 || in_array('administrator', array_values($user->roles))) {
