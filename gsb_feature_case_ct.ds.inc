@@ -75,19 +75,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_year' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_publication_type' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -95,6 +82,19 @@ function gsb_feature_case_ct_ds_field_settings_info() {
           'suffix' => '<span class="pipe pub-type">|</span>',
           'ow' => TRUE,
           'ow-el' => 'span',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_year_of_publication' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
           'ow-cl' => '',
           'ow-def-cl' => TRUE,
           'ow-at' => '',
@@ -286,19 +286,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_year' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'span',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_academic_area_unlimited' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -312,6 +299,19 @@ function gsb_feature_case_ct_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
           'ow' => TRUE,
           'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_year_of_publication' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'span',
           'ow-cl' => '',
           'ow-def-cl' => TRUE,
           'ow-at' => '',
@@ -400,19 +400,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_year' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_publication_type' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -420,6 +407,19 @@ function gsb_feature_case_ct_ds_field_settings_info() {
           'suffix' => '<span class="pipe pub-type">|</span>',
           'ow' => TRUE,
           'ow-el' => 'span',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+    'field_year_of_publication' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
           'ow-cl' => '',
           'ow-def-cl' => TRUE,
           'ow-at' => '',
@@ -637,7 +637,14 @@ function gsb_feature_case_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_year' => array(
+    'field_academic_area_unlimited' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_year_of_publication' => array(
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
@@ -647,13 +654,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
           'ow-def-cl' => TRUE,
           'ow-at' => '',
           'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
-    'field_academic_area_unlimited' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
         ),
       ),
     ),
@@ -690,6 +690,19 @@ function gsb_feature_case_ct_ds_field_settings_info() {
           'func' => 'theme_ds_field_expert',
         ),
         'conditions' => array(),
+      ),
+    ),
+    'field_year_of_publication' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => '',
+          'ow-def-cl' => TRUE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
       ),
     ),
   );
@@ -743,21 +756,21 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'group_wrapper_title',
         1 => 'field_publication_type',
-        2 => 'case_product_type',
-        3 => 'title',
-        4 => 'field_item_id',
-        5 => 'field_author',
-        6 => 'field_year',
+        2 => 'field_author',
+        3 => 'case_product_type',
+        4 => 'title',
+        5 => 'field_year_of_publication',
+        6 => 'field_item_id',
       ),
     ),
     'fields' => array(
       'group_wrapper_title' => 'ds_content',
       'field_publication_type' => 'ds_content',
+      'field_author' => 'ds_content',
       'case_product_type' => 'ds_content',
       'title' => 'ds_content',
+      'field_year_of_publication' => 'ds_content',
       'field_item_id' => 'ds_content',
-      'field_author' => 'ds_content',
-      'field_year' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -780,54 +793,54 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
+      'right' => array(
+        0 => 'related_title',
+        3 => 'gsb_feature_base_fields_faculty_authors',
+        21 => 'group_wrapper_related',
+      ),
       'left' => array(
-        0 => 'group_wrapper_title',
-        2 => 'case_product_type',
-        4 => 'title',
-        5 => 'field_author',
-        6 => 'field_year',
+        1 => 'group_wrapper_title',
+        2 => 'field_author',
+        4 => 'case_product_type',
+        5 => 'field_year_of_publication',
+        6 => 'title',
         7 => 'field_item_id',
-        8 => 'field_academic_area_unlimited',
-        9 => 'field_page_count',
+        8 => 'field_page_count',
+        9 => 'field_academic_area_unlimited',
         10 => 'group_wrapper_taxonomy',
         11 => 'field_business_insight_topic',
         12 => 'field_description',
         13 => 'field_learning_objective',
         14 => 'field_tag',
-        15 => 'field_link_single',
-        16 => 'field_citation',
+        15 => 'field_citation',
+        16 => 'field_link_single',
         17 => 'group_wrapper_paper_copy',
-        18 => 'field_link_center_single',
-        19 => 'gsb_feature_case_ct_pdf_statement',
+        18 => 'gsb_feature_case_ct_pdf_statement',
+        19 => 'field_link_center_single',
         20 => 'gsb_cmis_download_button',
-      ),
-      'right' => array(
-        1 => 'related_title',
-        3 => 'gsb_feature_base_fields_faculty_authors',
-        21 => 'group_wrapper_related',
       ),
     ),
     'fields' => array(
-      'group_wrapper_title' => 'left',
       'related_title' => 'right',
-      'case_product_type' => 'left',
-      'gsb_feature_base_fields_faculty_authors' => 'right',
-      'title' => 'left',
+      'group_wrapper_title' => 'left',
       'field_author' => 'left',
-      'field_year' => 'left',
+      'gsb_feature_base_fields_faculty_authors' => 'right',
+      'case_product_type' => 'left',
+      'field_year_of_publication' => 'left',
+      'title' => 'left',
       'field_item_id' => 'left',
-      'field_academic_area_unlimited' => 'left',
       'field_page_count' => 'left',
+      'field_academic_area_unlimited' => 'left',
       'group_wrapper_taxonomy' => 'left',
       'field_business_insight_topic' => 'left',
       'field_description' => 'left',
       'field_learning_objective' => 'left',
       'field_tag' => 'left',
-      'field_link_single' => 'left',
       'field_citation' => 'left',
+      'field_link_single' => 'left',
       'group_wrapper_paper_copy' => 'left',
-      'field_link_center_single' => 'left',
       'gsb_feature_case_ct_pdf_statement' => 'left',
+      'field_link_center_single' => 'left',
       'gsb_cmis_download_button' => 'left',
       'group_wrapper_related' => 'right',
     ),
@@ -857,22 +870,22 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'group_wrapper_title',
         1 => 'field_publication_type',
-        2 => 'case_product_type',
-        3 => 'title',
-        4 => 'field_item_id',
-        5 => 'field_author',
-        6 => 'field_year',
+        2 => 'field_author',
+        3 => 'case_product_type',
+        4 => 'title',
+        5 => 'field_year_of_publication',
+        6 => 'field_item_id',
         7 => 'field_description',
       ),
     ),
     'fields' => array(
       'group_wrapper_title' => 'ds_content',
       'field_publication_type' => 'ds_content',
+      'field_author' => 'ds_content',
       'case_product_type' => 'ds_content',
       'title' => 'ds_content',
+      'field_year_of_publication' => 'ds_content',
       'field_item_id' => 'ds_content',
-      'field_author' => 'ds_content',
-      'field_year' => 'ds_content',
       'field_description' => 'ds_content',
     ),
     'classes' => array(),
@@ -991,10 +1004,10 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
         1 => 'title',
         2 => 'field_item_id',
         3 => 'field_author',
-        4 => 'field_year',
+        4 => 'field_year_of_publication',
         5 => 'field_description',
-        6 => 'group_wrapper_topics',
-        7 => 'field_academic_area_unlimited',
+        6 => 'field_academic_area_unlimited',
+        7 => 'group_wrapper_topics',
         8 => 'field_business_insight_topic',
       ),
     ),
@@ -1003,10 +1016,10 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'title' => 'ds_content',
       'field_item_id' => 'ds_content',
       'field_author' => 'ds_content',
-      'field_year' => 'ds_content',
+      'field_year_of_publication' => 'ds_content',
       'field_description' => 'ds_content',
-      'group_wrapper_topics' => 'ds_content',
       'field_academic_area_unlimited' => 'ds_content',
+      'group_wrapper_topics' => 'ds_content',
       'field_business_insight_topic' => 'ds_content',
     ),
     'classes' => array(),
@@ -1032,18 +1045,18 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'group_wrapper_title',
-        1 => 'case_product_type',
-        2 => 'title',
-        3 => 'field_author',
-        4 => 'field_year',
+        1 => 'field_author',
+        2 => 'case_product_type',
+        3 => 'field_year_of_publication',
+        4 => 'title',
       ),
     ),
     'fields' => array(
       'group_wrapper_title' => 'ds_content',
-      'case_product_type' => 'ds_content',
-      'title' => 'ds_content',
       'field_author' => 'ds_content',
-      'field_year' => 'ds_content',
+      'case_product_type' => 'ds_content',
+      'field_year_of_publication' => 'ds_content',
+      'title' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

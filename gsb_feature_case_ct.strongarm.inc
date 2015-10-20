@@ -121,6 +121,12 @@ function gsb_feature_case_ct_strongarm() {
       'expanded' => array(
         'custom_settings' => TRUE,
       ),
+      'event_contacts' => array(
+        'custom_settings' => FALSE,
+      ),
+      'main_list' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -147,11 +153,11 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => TRUE,
           ),
           'views_content_pane' => array(
-            'weight' => '0',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'teaser_listing' => array(
-            'weight' => '12',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'idea_story_related' => array(
@@ -167,7 +173,7 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'compact' => array(
-            'weight' => '13',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'expanded' => array(
@@ -177,11 +183,11 @@ function gsb_feature_case_ct_strongarm() {
         ),
         'gsb_cmis_download_button' => array(
           'default' => array(
-            'weight' => '14',
+            'weight' => '13',
             'visible' => TRUE,
           ),
           'teaser_listing' => array(
-            'weight' => '7',
+            'weight' => '17',
             'visible' => FALSE,
           ),
           'idea_story_related' => array(
@@ -197,21 +203,25 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'compact' => array(
-            'weight' => '24',
+            'weight' => '25',
             'visible' => FALSE,
           ),
           'expanded' => array(
             'weight' => '22',
             'visible' => FALSE,
           ),
+          'views_content_pane' => array(
+            'weight' => '10',
+            'visible' => FALSE,
+          ),
         ),
         'gsb_feature_case_ct_pdf_statement' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '12',
             'visible' => TRUE,
           ),
           'teaser_listing' => array(
-            'weight' => '8',
+            'weight' => '18',
             'visible' => FALSE,
           ),
           'idea_story_related' => array(
@@ -227,11 +237,15 @@ function gsb_feature_case_ct_strongarm() {
             'visible' => FALSE,
           ),
           'compact' => array(
-            'weight' => '21',
+            'weight' => '22',
             'visible' => FALSE,
           ),
           'expanded' => array(
             'weight' => '20',
+            'visible' => FALSE,
+          ),
+          'views_content_pane' => array(
+            'weight' => '11',
             'visible' => FALSE,
           ),
         ),
