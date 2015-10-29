@@ -701,12 +701,12 @@ function gsb_feature_case_ct_node_view($node, $view_mode, $langcode) {
     $pdf_statement_markup = '';
     if (in_array($case_access, array('Free') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
-        t('This material is available to download at no charge.') .
+        t('This material is available for download at no charge.') .
         '</span>';
     }
     if (in_array($case_access, array('Instructors only') )) {
       $pdf_statement_markup = '<span class="gsb-feature-case-ct-pdf-statement">' .
-        t('This material is available to instructors only. For inquires, contact the ') .
+        t('This material is available for download by instructors only. For inquires, contact the ') .
         '<a href="mailto:businesscases@stanford.edu" target="_blank">' .
         t('Case Writing Office') .
         '</a>.' .
