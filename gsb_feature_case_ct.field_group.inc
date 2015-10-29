@@ -21,7 +21,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Available for purchase',
-    'weight' => '11',
+    'weight' => '12',
     'children' => array(
       0 => 'field_link_single',
       1 => 'field_link_center_single',
@@ -30,13 +30,13 @@ function gsb_feature_case_ct_field_group_info() {
     'format_settings' => array(
       'label' => 'Available for purchase',
       'instance_settings' => array(
-        'classes' => '',
+        'id' => 'node_case_full_group_wrapper_paper_copy',
+        'classes' => 'group-wrapper-paper-copy',
         'description' => '',
         'show_label' => '1',
         'label_element' => 'h3',
         'effect' => 'none',
         'speed' => 'none',
-        'id' => 'node_case_full_group_wrapper_paper_copy',
       ),
       'formatter' => 'open',
     ),
@@ -54,7 +54,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related',
-    'weight' => '14',
+    'weight' => '11',
     'children' => array(
       0 => 'gsb_feature_base_fields_faculty_authors',
       1 => 'related_title',
@@ -82,7 +82,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Tagging',
-    'weight' => '6',
+    'weight' => '5',
     'children' => array(
       0 => 'field_business_insight_topic',
       1 => 'field_academic_area_unlimited',
@@ -92,7 +92,7 @@ function gsb_feature_case_ct_field_group_info() {
       'label' => 'Tagging',
       'instance_settings' => array(
         'item_count' => '0',
-        'classes' => '',
+        'classes' => 'group-wrapper-taxonomy',
       ),
       'formatter' => 'open',
     ),

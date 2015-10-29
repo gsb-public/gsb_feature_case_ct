@@ -183,7 +183,7 @@ function gsb_feature_case_ct_strongarm() {
         ),
         'gsb_cmis_download_button' => array(
           'default' => array(
-            'weight' => '13',
+            'weight' => '10',
             'visible' => TRUE,
           ),
           'teaser_listing' => array(
@@ -217,7 +217,7 @@ function gsb_feature_case_ct_strongarm() {
         ),
         'gsb_feature_case_ct_pdf_statement' => array(
           'default' => array(
-            'weight' => '12',
+            'weight' => '9',
             'visible' => TRUE,
           ),
           'teaser_listing' => array(
