@@ -173,12 +173,6 @@ function gsb_feature_case_ct_ds_field_settings_info() {
       'formatter_settings' => array(
         'ft' => array(
           'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'div',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
         ),
       ),
     ),
@@ -773,8 +767,8 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
     'regions' => array(
       'left' => array(
         0 => 'group_wrapper_title',
-        3 => 'field_author',
-        4 => 'case_product_type',
+        2 => 'case_product_type',
+        4 => 'field_author',
         5 => 'title',
         6 => 'field_year_of_publication',
         7 => 'field_item_id',
@@ -790,9 +784,9 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       ),
       'right' => array(
         1 => 'related_title',
-        2 => 'gsb_feature_base_fields_faculty_authors',
-        17 => 'group_wrapper_related',
-        18 => 'field_link_single',
+        3 => 'gsb_feature_base_fields_faculty_authors',
+        17 => 'field_link_single',
+        18 => 'group_wrapper_related',
         19 => 'field_link_center_single',
         20 => 'group_wrapper_paper_copy',
       ),
@@ -800,9 +794,9 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
     'fields' => array(
       'group_wrapper_title' => 'left',
       'related_title' => 'right',
+      'case_product_type' => 'left',
       'gsb_feature_base_fields_faculty_authors' => 'right',
       'field_author' => 'left',
-      'case_product_type' => 'left',
       'title' => 'left',
       'field_year_of_publication' => 'left',
       'field_item_id' => 'left',
@@ -815,8 +809,8 @@ function gsb_feature_case_ct_ds_layout_settings_info() {
       'field_citation' => 'left',
       'gsb_feature_case_ct_pdf_statement' => 'left',
       'gsb_cmis_download_button' => 'left',
-      'group_wrapper_related' => 'right',
       'field_link_single' => 'right',
+      'group_wrapper_related' => 'right',
       'field_link_center_single' => 'right',
       'group_wrapper_paper_copy' => 'right',
     ),

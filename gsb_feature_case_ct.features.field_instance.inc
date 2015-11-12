@@ -10,7 +10,7 @@
 function gsb_feature_case_ct_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-case-field_academic_area_unlimited'
+  // Exported field_instance: 'node-case-field_academic_area_unlimited'.
   $field_instances['node-case-field_academic_area_unlimited'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -102,7 +102,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_author'
+  // Exported field_instance: 'node-case-field_author'.
   $field_instances['node-case-field_author'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -211,7 +211,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_authors'
+  // Exported field_instance: 'node-case-field_authors'.
   $field_instances['node-case-field_authors'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -289,7 +289,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_business_insight_topic'
+  // Exported field_instance: 'node-case-field_business_insight_topic'.
   $field_instances['node-case-field_business_insight_topic'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -381,7 +381,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_case_access'
+  // Exported field_instance: 'node-case-field_case_access'.
   $field_instances['node-case-field_case_access'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -459,7 +459,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_centers_research_programs'
+  // Exported field_instance: 'node-case-field_centers_research_programs'.
   $field_instances['node-case-field_centers_research_programs'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -538,7 +538,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_circle_topics'
+  // Exported field_instance: 'node-case-field_circle_topics'.
   $field_instances['node-case-field_circle_topics'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -617,7 +617,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_citation'
+  // Exported field_instance: 'node-case-field_citation'.
   $field_instances['node-case-field_citation'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -706,7 +706,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_description'
+  // Exported field_instance: 'node-case-field_description'.
   $field_instances['node-case-field_description'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -870,7 +870,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_document_name'
+  // Exported field_instance: 'node-case-field_document_name'.
   $field_instances['node-case-field_document_name'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -955,7 +955,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_document_uuid'
+  // Exported field_instance: 'node-case-field_document_uuid'.
   $field_instances['node-case-field_document_uuid'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1040,7 +1040,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_free_case'
+  // Exported field_instance: 'node-case-field_free_case'.
   $field_instances['node-case-field_free_case'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -1125,7 +1125,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_has_case_center'
+  // Exported field_instance: 'node-case-field_has_case_center'.
   $field_instances['node-case-field_has_case_center'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -1210,7 +1210,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_has_harvard_link'
+  // Exported field_instance: 'node-case-field_has_harvard_link'.
   $field_instances['node-case-field_has_harvard_link'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -1295,7 +1295,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_item_id'
+  // Exported field_instance: 'node-case-field_item_id'.
   $field_instances['node-case-field_item_id'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1392,7 +1392,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_learning_objective'
+  // Exported field_instance: 'node-case-field_learning_objective'.
   $field_instances['node-case-field_learning_objective'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1482,7 +1482,7 @@ function gsb_feature_case_ct_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_link_center_single'
+  // Exported field_instance: 'node-case-field_link_center_single'.
   $field_instances['node-case-field_link_center_single'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1596,7 +1596,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_link_document'
+  // Exported field_instance: 'node-case-field_link_document'.
   $field_instances['node-case-field_link_document'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1697,7 +1697,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_link_single'
+  // Exported field_instance: 'node-case-field_link_single'.
   $field_instances['node-case-field_link_single'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1811,7 +1811,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_page_count'
+  // Exported field_instance: 'node-case-field_page_count'.
   $field_instances['node-case-field_page_count'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1899,7 +1899,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_paper_copy'
+  // Exported field_instance: 'node-case-field_paper_copy'.
   $field_instances['node-case-field_paper_copy'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -1977,7 +1977,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_permissions_statement'
+  // Exported field_instance: 'node-case-field_permissions_statement'.
   $field_instances['node-case-field_permissions_statement'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -2062,7 +2062,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_product_type'
+  // Exported field_instance: 'node-case-field_product_type'.
   $field_instances['node-case-field_product_type'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -2140,7 +2140,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_publication_type'
+  // Exported field_instance: 'node-case-field_publication_type'.
   $field_instances['node-case-field_publication_type'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
@@ -2232,7 +2232,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_search_field'
+  // Exported field_instance: 'node-case-field_search_field'.
   $field_instances['node-case-field_search_field'] = array(
     'bundle' => 'case',
     'deleted' => 0,
@@ -2332,7 +2332,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_submit'
+  // Exported field_instance: 'node-case-field_submit'.
   $field_instances['node-case-field_submit'] = array(
     'bundle' => 'case',
     'deleted' => 0,
@@ -2409,7 +2409,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_tag'
+  // Exported field_instance: 'node-case-field_tag'.
   $field_instances['node-case-field_tag'] = array(
     'bundle' => 'case',
     'default_value' => NULL,
@@ -2489,7 +2489,7 @@ Stanford GSB classes only, restricted',
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'node-case-field_year'
+  // Exported field_instance: 'node-case-field_year'.
   $field_instances['node-case-field_year'] = array(
     'bundle' => 'case',
     'deleted' => 0,
@@ -2574,7 +2574,7 @@ Stanford GSB classes only, restricted',
     ),
   );
 
-  // Exported field_instance: 'node-case-field_year_of_publication'
+  // Exported field_instance: 'node-case-field_year_of_publication'.
   $field_instances['node-case-field_year_of_publication'] = array(
     'bundle' => 'case',
     'custom_add_another' => '',
