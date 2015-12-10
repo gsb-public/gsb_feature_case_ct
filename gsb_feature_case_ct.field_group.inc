@@ -63,10 +63,10 @@ function gsb_feature_case_ct_field_group_info() {
     'format_settings' => array(
       'label' => 'Related',
       'instance_settings' => array(
-        'classes' => 'field-group-fieldset group-wrapper-related',
+        'classes' => '',
         'description' => '',
       ),
-      'formatter' => 'collapsible',
+      'formatter' => 'collapsed',
     ),
   );
   $export['group_wrapper_related|node|case|default'] = $field_group;
