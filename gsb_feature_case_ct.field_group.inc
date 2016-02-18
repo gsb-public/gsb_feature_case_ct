@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gsb_feature_case_ct_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -20,15 +20,15 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Available for purchase',
-    'weight' => '12',
+    'label' => 'Available for Purchase',
+    'weight' => '11',
     'children' => array(
       0 => 'field_link_single',
       1 => 'field_link_center_single',
     ),
     'format_type' => 'div',
     'format_settings' => array(
-      'label' => 'Available for purchase',
+      'label' => 'Available for Purchase',
       'instance_settings' => array(
         'id' => 'node_case_full_group_wrapper_paper_copy',
         'classes' => 'group-wrapper-paper-copy',
@@ -41,7 +41,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_paper_copy|node|case|default'] = $field_group;
+  $field_groups['group_wrapper_paper_copy|node|case|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -54,7 +54,7 @@ function gsb_feature_case_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Related',
-    'weight' => '11',
+    'weight' => '12',
     'children' => array(
       0 => 'gsb_feature_base_fields_faculty_authors',
       1 => 'related_title',
@@ -69,7 +69,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'collapsed',
     ),
   );
-  $export['group_wrapper_related|node|case|default'] = $field_group;
+  $field_groups['group_wrapper_related|node|case|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -97,7 +97,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_taxonomy|node|case|default'] = $field_group;
+  $field_groups['group_wrapper_taxonomy|node|case|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -132,7 +132,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_title|node|case|compact'] = $field_group;
+  $field_groups['group_wrapper_title|node|case|compact'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -165,7 +165,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_title|node|case|default'] = $field_group;
+  $field_groups['group_wrapper_title|node|case|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -200,7 +200,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_title|node|case|expanded'] = $field_group;
+  $field_groups['group_wrapper_title|node|case|expanded'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -233,7 +233,7 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_title|node|case|views_content_pane'] = $field_group;
+  $field_groups['group_wrapper_title|node|case|views_content_pane'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -261,7 +261,15 @@ function gsb_feature_case_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper_topics|node|case|teaser_listing'] = $field_group;
+  $field_groups['group_wrapper_topics|node|case|teaser_listing'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Available for Purchase');
+  t('Related');
+  t('Tagging');
+  t('Title wrapper');
+  t('Topic');
+
+  return $field_groups;
 }
