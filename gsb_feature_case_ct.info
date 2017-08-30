@@ -1,7 +1,7 @@
 name = GSB Feature Case Content Type
 core = 7.x
 package = GSB
-version = 7.x-5.08
+version = 7.x-5.09
 project = gsb_feature_case_ct
 dependencies[] = concat_field
 dependencies[] = ctools
@@ -67,6 +67,7 @@ features[field_instance][] = node-case-field_document_uuid
 features[field_instance][] = node-case-field_free_case
 features[field_instance][] = node-case-field_has_case_center
 features[field_instance][] = node-case-field_has_harvard_link
+features[field_instance][] = node-case-field_instance_text
 features[field_instance][] = node-case-field_item_id
 features[field_instance][] = node-case-field_learning_objective
 features[field_instance][] = node-case-field_link_center_single

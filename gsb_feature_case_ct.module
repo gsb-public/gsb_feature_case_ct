@@ -17,6 +17,8 @@ function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
   $form['field_link_document']['#disabled'] = TRUE;
   $form['field_document_name']['#disabled'] = TRUE;
   $form['field_case_access']['#disabled'] = TRUE;
+  if($form['#bundle'] == 'case')
+  $form['field_instance_text']['#disabled'] = TRUE;
 
   $form['field_year']['#access'] = FALSE;
 
