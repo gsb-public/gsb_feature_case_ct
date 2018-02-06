@@ -12,7 +12,7 @@ include_once 'gsb_feature_case_ct.features.inc';
 function gsb_feature_case_ct_form_case_node_form_alter(&$form, &$form_state) {
   global $user;
   $language = $form['language']['#value'];
-  if(!isset($user->roles[11]) ){
+  if(!in_array('administrator', array_values($user->roles))) {
     $form['field_document_uuid']['#disabled'] = TRUE;
     $form['field_document_name']['#disabled'] = TRUE;
     $form['field_case_access']['#disabled'] = TRUE;
