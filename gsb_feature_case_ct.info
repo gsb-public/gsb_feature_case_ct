@@ -95,6 +95,7 @@ features[variable][] = node_preview_case
 features[variable][] = node_submitted_case
 features[variable][] = pathauto_node_case_pattern
 features[variable][] = workbench_access_node_type_case
+features[variable][] = xmlsitemap_settings_node_case
 features_exclude[field_base][field_document_name] = field_document_name
 features_exclude[field_base][field_author] = field_author
 features_exclude[field_base][field_item_id] = field_item_id
